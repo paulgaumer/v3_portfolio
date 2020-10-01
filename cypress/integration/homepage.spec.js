@@ -13,11 +13,15 @@ describe("Homepage", () => {
     cy.findByTestId("hero-image").should("have.length", 1)
   })
   it('Render an internal link navigating to "#portfolio"', () => {
-    cy.get("a[href*='portfolio']").click()
+    cy.verifyLink("Portfolio", "#portfolio").click()
     cy.url().should("include", "#portfolio")
   })
-  it('Render an internal link navigating to "/page-2"', () => {
-    cy.get("a[href*='page-2']").click()
-    cy.url().should("include", "/page-2")
+  it('Render an internal link navigating to "/about"', () => {
+    cy.verifyLink("About", "/about").click()
+    cy.url().should("include", "/about")
+  })
+  it('Render an internal link navigating to "/blog"', () => {
+    cy.verifyLink("Blog", "/blog").click()
+    cy.url().should("include", "/blog")
   })
 })
