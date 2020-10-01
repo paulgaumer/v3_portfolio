@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Paul Gaumer`,
+    description: `Paul Gaumer - Software Developer. Welcome to my site!`,
+    author: `@paulgaumer`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +15,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        printRejected: false,
+        develop: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
