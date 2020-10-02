@@ -14,20 +14,20 @@ const PortfolioCard = ({
   return (
     <div
       data-testid="project-card"
-      className={`flex w-full space-x-14 ${
-        numberIsEven(index + 1) ? "flex-row-reverse space-x-reverse" : ""
+      className={`lg:flex w-full lg:space-x-14 ${
+        numberIsEven(index + 1) ? "lg:flex-row-reverse lg:space-x-reverse" : ""
       }`}
     >
-      <div data-name="image-side" className={`flex items-center w-1/2`}>
+      <div data-name="image-side" className={`flex items-center lg:w-1/2`}>
         <ImageHot
           image={frontImage}
           alt={title}
-          customClasses="w-full rounded"
+          customClasses="w-full rounded-lg"
         />
       </div>
       <div
         data-name="description-side"
-        className={`flex flex-col items-center justify-center w-1/2`}
+        className={`flex flex-col items-center justify-center lg:w-1/2 lg:mt-0 mt-8`}
       >
         <h3 className="text-2xl font-semibold text-center text-gray-900 mb-7">
           {title}
