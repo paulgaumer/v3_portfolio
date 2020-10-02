@@ -13,6 +13,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `5myts4xb`,
+        dataset: `production`,
+        // a token with read permissions is required
+        // if you have a private dataset
+        // token: process.env.SANITY_TOKEN,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,

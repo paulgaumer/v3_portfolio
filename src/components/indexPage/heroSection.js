@@ -18,10 +18,10 @@ const HeroSection = () => {
         accessible and smooth web experiences.
       </p>
       <img
-        src="https://via.placeholder.com/150"
+        src="https://via.placeholder.com/2000x2000"
         alt="Paul Gaumer"
         data-testid="hero-image"
-        className="mt-12 rounded-lg"
+        className="w-full mt-12 rounded-lg"
       />
     </SectionContainer>
   )
