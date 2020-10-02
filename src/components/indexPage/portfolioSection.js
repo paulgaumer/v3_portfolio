@@ -5,7 +5,7 @@ import PortfolioCard from "../portfolio/portfolioCard"
 
 const PortfolioSection = ({ projects }) => {
   return (
-    <SectionContainer maxWidth="max-w-xl lg:max-w-3xl xl:max-w-6xl">
+    <SectionContainer>
       <div className="mt-20 md:mt-32 lg:mt-48" id="portfolio">
         <h2
           data-testid="portfolio-section-title"
@@ -13,7 +13,7 @@ const PortfolioSection = ({ projects }) => {
         >
           Portfolio
         </h2>
-        <div className="mx-auto mt-16 space-y-20 xl:max-w-6xl">
+        <div className="mt-16 space-y-24">
           {projects.map((project, index) => (
             <PortfolioCard
               key={project.id}
@@ -21,8 +21,8 @@ const PortfolioSection = ({ projects }) => {
               title={project.title}
               description={project.description}
               url={project.url}
-              frontImage={project.frontImage.asset.fluid}
-              backImage={project.backImage.asset.fluid}
+              frontImage={project.frontImage}
+              backImage={project.backImage}
             />
           ))}
         </div>

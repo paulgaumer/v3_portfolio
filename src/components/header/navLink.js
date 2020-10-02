@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 const NavLink = ({ gatsbyLink, href, linkText }) => {
-  const classes = `pb-4 ml-6 text-gray-600 border-b border-transparent xl:pb-6 lg:ml-8 lg:text-base xl:text-lg hover:text-gray-900 capitalize inline-block antialiased`
+  const classes = `ml-6 text-gray-600 border-b border-transparent lg:ml-8 lg:text-base xl:text-lg hover:text-gray-900 capitalize inline-block antialiased`
 
   if (gatsbyLink) {
     return (

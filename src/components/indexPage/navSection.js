@@ -23,8 +23,8 @@ const NavSection = () => {
       <ul className="mt-16 md:text-lg lg:grid lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16">
         <li className="">
           <NavItem
-            href="/about"
-            title="about"
+            href="#portfolio"
+            title="portfolio"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
         suscipit ducimus quasi distinctio? Ipsum animi a mollitia voluptatum
         optio, nam perspiciatis expedita tempore doloremque pariatur cumque aut
@@ -43,8 +43,8 @@ const NavSection = () => {
         </li>
         <li className="">
           <NavItem
-            href="/about"
-            title="about"
+            href="/blog"
+            title="blog"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
         suscipit ducimus quasi distinctio? Ipsum animi a mollitia voluptatum
         optio, nam perspiciatis expedita tempore doloremque pariatur cumque aut

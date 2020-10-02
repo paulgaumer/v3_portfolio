@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
+import ImageHot from "../global/imageHot"
+import numberIsEven from "../../utils/numberIsEven"
 
 const PortfolioCard = ({
   index,
@@ -8,19 +9,25 @@ const PortfolioCard = ({
   description,
   url,
   frontImage,
-  backImage,
+  // backImage,
 }) => {
   return (
     <div
       data-testid="project-card"
-      className="grid w-full grid-cols-12 grid-rows-1 gap-14"
+      className={`flex w-full space-x-14 ${
+        numberIsEven(index + 1) ? "flex-row-reverse space-x-reverse" : ""
+      }`}
     >
-      <div data-name="image-side" className="flex items-center col-span-6">
-        <Img fluid={frontImage} alt={title} className="w-full rounded" />
+      <div data-name="image-side" className={`flex items-center w-1/2`}>
+        <ImageHot
+          image={frontImage}
+          alt={title}
+          customClasses="w-full rounded"
+        />
       </div>
       <div
         data-name="description-side"
-        className="flex flex-col items-center justify-center w-full col-span-6"
+        className={`flex flex-col items-center justify-center w-1/2`}
       >
         <h3 className="text-2xl font-semibold text-center text-gray-900 mb-7">
           {title}
@@ -47,5 +54,5 @@ PortfolioCard.propTypes = {
   description: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   frontImage: PropTypes.object.isRequired,
-  backImage: PropTypes.object.isRequired,
+  // backImage: PropTypes.object.isRequired,
 }
