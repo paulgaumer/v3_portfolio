@@ -20,7 +20,10 @@ const NavItem = ({ href, title, description }) => {
 const NavSection = () => {
   return (
     <SectionContainer>
-      <ul className="mt-16 md:text-lg lg:grid lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16">
+      <ul
+        data-testid="nav-section"
+        className="mt-16 md:text-lg lg:grid lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16"
+      >
         <li className="">
           <NavItem
             href="#portfolio"

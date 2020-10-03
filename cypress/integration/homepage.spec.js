@@ -13,16 +13,33 @@ describe("Homepage", () => {
     cy.findByTestId("hero-image").should("have.length", 1)
   })
   it('Render an internal link navigating to "#portfolio"', () => {
-    cy.verifyLink(/portfolio/i, "/#portfolio").click()
-    cy.url().should("include", "/#portfolio")
+    cy.get("[data-testid=nav-section] a")
+      .contains(/portfolio/i)
+      .parent()
+      .should("have.attr", "href", "/#portfolio")
+      .click()
+    // .url()
+    // .should("include", "#portfolio")
   })
   it('Render an internal link navigating to "/about"', () => {
-    cy.verifyLink("About", "/about").click()
-    cy.url().should("include", "/about")
+    cy.visit("/")
+    cy.get("[data-testid=nav-section] a")
+      .contains(/about/i)
+      .parent()
+      .should("have.attr", "href", "/about")
+      .click()
+    // .url()
+    // .should("include", "/about")
   })
   it('Render an internal link navigating to "/blog"', () => {
-    cy.verifyLink("Blog", "/blog").click()
-    cy.url().should("include", "/blog")
+    cy.visit("/")
+    cy.get("[data-testid=nav-section] a")
+      .contains(/blog/i)
+      .parent()
+      .should("have.attr", "href", "/blog")
+      .click()
+    // .url()
+    // .should("include", "/blog")
   })
 })
 
@@ -31,35 +48,19 @@ describe("Portfolio", () => {
     cy.visit("/")
   })
 
-  // it("Number of rendered nodes matches the number of elements passed as a prop (project list) ", () => {})
-
   it("Render the portfolio section title", () => {
     cy.findByTestId("portfolio-section-title").contains("Portfolio")
   })
-  it("Render a card title", () => {
-    cy.findAllByTestId("project-card")
-      .children("h3")
-      // Check if the text length is >= 1
-      .contains(/^.{1,}$/)
+  it("Render a card title with text", () => {
+    cy.get("[data-testid=project-card] h3").should("not.be.empty")
   })
   it("Render a card description", () => {
-    cy.findAllByTestId("project-card")
-      .children("p")
-      .contains(/^.{1,}$/)
+    cy.get("[data-testid=project-card] p").should("not.be.empty")
   })
   it("Render a card link containing a non-empty href", () => {
-    const links = cy.findAllByTestId("project-card").children("a")
-    links.should("have.attr", "href")
-    links.get('[href=""]').should("not.exist")
-  })
-  it("Render a card with a back image", () => {
-    cy.findAllByTestId("project-card").children(
-      "[data-testid='project-card-back-image'"
-    )
+    cy.get("[data-testid=project-card] a").get('[href=""]').should("not.exist")
   })
   it("Render a card with a front image", () => {
-    cy.findAllByTestId("project-card").children(
-      "[data-testid='project-card-front-image'"
-    )
+    cy.get("[data-name='image-side'] img").should("exist")
   })
 })
