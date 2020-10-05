@@ -6,8 +6,8 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="flex flex-col w-full min-h-screen px-4 mx-auto font-sans text-base text-gray-800 max-w-7xl sm:px-6 lg:px-8">
+    <div className="flex flex-col min-h-screen font-sans text-base antialiased">
+      <div className="flex flex-col w-full min-h-screen px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <Header />
         <main className="flex-grow">{children}</main>
       </div>

@@ -28,7 +28,7 @@ const Footer = () => {
                     href="https://github.com/paulgaumer"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ariaLabel="Open Github profile"
+                    aria-label="Open Github profile"
                   >
                     <img src={github} alt="github icon" className="w-8 h-10" />
                   </a>
@@ -38,7 +38,7 @@ const Footer = () => {
                     href="https://www.linkedin.com/in/paulgaumer/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ariaLabel="Open Linkedin profile"
+                    aria-label="Open Linkedin profile"
                   >
                     <img
                       src={linkedin}
@@ -52,7 +52,7 @@ const Footer = () => {
                     href="https://twitter.com/PaulGaumer"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ariaLabel="Open Twitter profile"
+                    aria-label="Open Twitter profile"
                   >
                     <img
                       src={twitter}

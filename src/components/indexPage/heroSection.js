@@ -6,6 +6,7 @@ const HeroSection = () => {
   return (
     <SectionContainer>
       {/* TITLE */}
+      <div></div>
       <h1
         data-testid="hero-title"
         className="mt-8 mb-6 text-5xl font-semibold leading-tight text-gray-800 md:mb-10 xl:mb-16 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl md:mt-16 xl:mt-24"
