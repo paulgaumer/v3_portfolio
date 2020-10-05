@@ -5,7 +5,7 @@ import linkedin from "../../images/linkedin.svg"
 
 const Footer = () => {
   return (
-    <div data-name="footer-wrapper" className="mt-20 bg-bluePrimary">
+    <div data-name="footer-wrapper" className="mt-20 bg-gray-800">
       <footer className="px-4 pt-16 pb-5 mx-auto text-white max-w-7xl">
         <div className="mb-16 text-center">
           <h4 className="antialiased text-yellowPrimary">Next step?</h4>
@@ -83,7 +83,10 @@ const Footer = () => {
                 className="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none focus:outline-none focus:placeholder-gray-400"
               />
               <div className="rounded-md shadow">
-                <button className="flex items-center justify-center w-full px-5 py-3 space-x-1 text-base font-medium leading-6 text-gray-900 transition duration-150 ease-in-out border border-transparent rounded-md bg-yellowPrimary hover:bg-yellowSecondary focus:outline-none focus:bg-indigo-400">
+                <button
+                  type="submit"
+                  className="flex items-center justify-center w-full px-5 py-3 space-x-1 text-base font-medium leading-6 text-gray-900 transition duration-150 ease-in-out border border-transparent rounded-md bg-yellowPrimary hover:bg-yellowSecondary focus:outline-none focus:bg-indigo-400"
+                >
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
