@@ -23,7 +23,7 @@ const About = () => {
         >
           About
         </h1>
-        <div data-testid="hero-bio" className="prose prose-lg">
+        <div data-testid="hero-bio" className="prose md:prose-xl">
           <SectionIntro>
             <p>
               My name is Paul Gaumer and I am a French developer and startup
@@ -51,7 +51,7 @@ const About = () => {
           </SectionIntro>
         </div>
 
-        <AboutSection customClasses="prose">
+        <AboutSection customClasses="prose md:prose-lg">
           <h2 className="">Startups in Japan</h2>
           <p>
             I spent the past 10 years living in Japan where I've been blessed to
@@ -148,7 +148,7 @@ const About = () => {
             </ul>
           </div>
         </AboutSection>
-        <AboutSection customClasses="prose">
+        <AboutSection customClasses="prose md:prose-lg">
           <h2 className="">Talks</h2>
           <p>
             I have been fortunate to run numerous workshops and to be invited to
@@ -247,7 +247,7 @@ const About = () => {
             </div>
           </div>
         </AboutSection>
-        <AboutSection customClasses="prose">
+        <AboutSection customClasses="prose md:prose-lg">
           <h2 className="text-2xl font-semibold text-gray-900 capitalize md:text-2xl lg:text-2-5xl">
             Press & Interviews
           </h2>

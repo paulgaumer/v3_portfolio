@@ -35,7 +35,7 @@ const NavItem = ({ href, title, description }) => {
           </svg>
         </span>
       </Title>
-      <p className="mt-2 md:mt-4 lg:mt-6">{description}</p>
+      <p className="mt-2 md:mt-4 lg:mt-6 md:prose-lg">{description}</p>
     </div>
   )
 }

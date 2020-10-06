@@ -19,6 +19,7 @@ module.exports = {
     typography: theme => ({
       default: {
         css: {
+          color: theme("colors.gray.700"),
           a: {
             color: theme(`colors.blue.600`),
             textDecoration: `none`,

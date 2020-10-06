@@ -5,15 +5,15 @@ import PortfolioCard from "../portfolio/portfolioCard"
 
 const PortfolioSection = ({ projects }) => {
   return (
-    <SectionContainer>
+    <SectionContainer maxWidth="max-w-xl lg:max-w-5xl">
       <div className="mt-20 md:mt-32 lg:mt-48" id="portfolio">
         <h2
           data-testid="portfolio-section-title"
-          className="max-w-xl mx-auto mb-8 text-4xl font-semibold leading-tight text-gray-800 md:mb-10 xl:mb-16 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl lg:max-w-3xl"
+          className="max-w-xl mx-auto mb-8 text-4xl font-semibold leading-tight text-gray-800 md:mb-10 xl:mb-24 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl lg:max-w-3xl"
         >
           Portfolio
         </h2>
-        <div className="mt-16 space-y-24">
+        <div className="mt-16 space-y-32">
           {projects.map((project, index) => (
             <PortfolioCard
               key={project.id}
