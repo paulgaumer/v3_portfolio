@@ -6,15 +6,15 @@ import linkedin from "../../images/linkedin.svg"
 const Footer = () => {
   return (
     <div data-name="footer-wrapper" className="mt-20 bg-gray-800">
-      <footer className="px-4 pt-16 pb-5 mx-auto text-white max-w-7xl">
-        <div className="mb-16 text-center">
+      <footer className="px-10 pt-16 pb-5 mx-auto text-white max-w-7xl">
+        <div className="mb-10 text-center md:mb-16">
           <h4 className="antialiased text-yellowPrimary">Next step?</h4>
           <h3 data-testid="footer-title" className="mt-2 text-3xl uppercase">
             Let's work together!
           </h3>
         </div>
-        <div className="flex mb-20 space-x-16">
-          <div className="w-1/2 md:text-lg">
+        <div className="flex flex-col items-center mb-20 space-y-8 md:items-start md:space-y-0 md:space-x-16 md:flex-row">
+          <div className="text-lg md:w-1/2">
             <p className="mb-6" data-testid="footer-description">
               If you'd like to talk about a project or need advice about product
               and ideation , simply drop me a message. I'm currently available
@@ -64,11 +64,8 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="w-1/2">
-            <form
-              className="flex flex-col w-full space-y-6"
-              data-testid="footer-form"
-            >
+          <div className="md:w-1/2">
+            <form className="w-full space-y-6" data-testid="footer-form">
               <input
                 aria-label="Email address"
                 required

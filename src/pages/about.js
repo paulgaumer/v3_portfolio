@@ -17,15 +17,13 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <SectionContainer>
-        <div></div>
         <h1
           data-testid="page-title"
           className="mt-8 mb-6 text-5xl font-semibold leading-tight text-gray-800 md:mb-10 xl:mb-16 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl md:mt-16 xl:mt-24"
         >
           About
         </h1>
-        {/* DESCRIPTION */}
-        <div data-testid="hero-bio">
+        <div data-testid="hero-bio" className="prose prose-lg">
           <SectionIntro>
             <p>
               My name is Paul Gaumer and I am a French developer and startup
@@ -53,7 +51,7 @@ const About = () => {
           </SectionIntro>
         </div>
 
-        <AboutSection>
+        <AboutSection customClasses="prose">
           <h2 className="">Startups in Japan</h2>
           <p>
             I spent the past 10 years living in Japan where I've been blessed to
@@ -71,39 +69,51 @@ const About = () => {
             <Link href="https://www.lewagon.com/tokyo">Le Wagon</Link>
           </p>
           <p>Our missions were to:</p>
-          <ul>
-            <li className="flex items-center space-x-2">
-              <span>
-                <ArrowRight />
-              </span>
-              <span>Bring technical skills to creatives and entrepreneurs</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <ArrowRight />
-              </span>
-              <span>
-                Provide a pool a talents to the growing startup community
-              </span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <ArrowRight />
-              </span>
-              <span>
-                Support the development of innovative solutions post-bootcamp
-              </span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <ArrowRight />
-              </span>
-              <span>
-                Educate the Japanese market to alternative education and
-                lifestyle models
-              </span>
-            </li>
-          </ul>
+          <div>
+            <ul className="">
+              <li className="flex items-start space-x-2">
+                <span>
+                  <span>
+                    <ArrowRight customClasses="mt-2" />
+                  </span>
+                </span>
+                <span>
+                  Bring technical skills to creatives and entrepreneurs
+                </span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span>
+                  <span>
+                    <ArrowRight customClasses="mt-2" />
+                  </span>
+                </span>
+                <span>
+                  Provide a pool a talents to the growing startup community
+                </span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span>
+                  <span>
+                    <ArrowRight customClasses="mt-2" />
+                  </span>
+                </span>
+                <span>
+                  Support the development of innovative solutions post-bootcamp
+                </span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span>
+                  <span>
+                    <ArrowRight customClasses="mt-2" />
+                  </span>
+                </span>
+                <span>
+                  Educate the Japanese market to alternative education and
+                  lifestyle models
+                </span>
+              </li>
+            </ul>
+          </div>
 
           <p>
             After 3 years of activity and opening two locations (Tokyo & Kyoto),
@@ -113,33 +123,33 @@ const About = () => {
           </p>
 
           <h3>Fun facts</h3>
-          <ul className="no-bullet">
-            <li className="flex items-start space-x-2">
-              <span>
-                <Pen customClasses="mt-2" />
-              </span>
-              <span>
-                Previous students now work at Facebook, Apple, Amazon as well as
-                boutique agencies and blue chips.
-              </span>
-            </li>
-            <li className="flex items-start space-x-2">
-              <span>
-                <Pen customClasses="mt-2" />
-              </span>
-              <div>
-                Some of them founded companies, raising significant amounts of
-                capital (<Link href="https://www.preface.ai/">Preface</Link>) or
-                disrupting various markets (
-                <Link href="https://www.aoiship.com/">AoiShip</Link>)
-              </div>
-            </li>
-          </ul>
+          <div>
+            <ul className="">
+              <li className="flex items-start space-x-2">
+                <span>
+                  <Pen customClasses="mt-2" />
+                </span>
+                <span>
+                  Previous students now work at Facebook, Apple, Amazon as well
+                  as boutique agencies and blue chips.
+                </span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span>
+                  <Pen customClasses="mt-2" />
+                </span>
+                <div>
+                  Some of them founded companies, raising significant amounts of
+                  capital (<Link href="https://www.preface.ai/">Preface</Link>)
+                  or disrupting various markets (
+                  <Link href="https://www.aoiship.com/">AoiShip</Link>)
+                </div>
+              </li>
+            </ul>
+          </div>
         </AboutSection>
-        <AboutSection>
-          <h2 className="text-2xl font-semibold text-gray-900 capitalize md:text-2xl lg:text-2-5xl">
-            Talks
-          </h2>
+        <AboutSection customClasses="prose">
+          <h2 className="">Talks</h2>
           <p>
             I have been fortunate to run numerous workshops and to be invited to
             events and panels as a speaker, including:
@@ -237,68 +247,70 @@ const About = () => {
             </div>
           </div>
         </AboutSection>
-        <AboutSection>
+        <AboutSection customClasses="prose">
           <h2 className="text-2xl font-semibold text-gray-900 capitalize md:text-2xl lg:text-2-5xl">
             Press & Interviews
           </h2>
-          <ul className="grid grid-cols-2">
-            <li className="flex items-center space-x-2">
-              <span>
-                <Chat />
-              </span>
-              <Link href="https://r.nikkei.com/article/DGXMZO33502780X20C18A7FFR000?s=3">
-                <span> Nikkei</span>
-              </Link>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <Chat />
-              </span>
-              <Link href="https://jp.techcrunch.com/2017/01/27/le-wagon-tokyo-launch/">
-                <span> TechCrunch</span>
-              </Link>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <Chat />
-              </span>
-              <Link href="https://thebridge.jp/2017/12/announcing-le-wagon-tokyo-2018">
-                <span> The Bridge</span>
-              </Link>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <Chat />
-              </span>
-              <Link href="https://www.reuters.com/article/us-japan-coding-bootcamp/silicon-valley-style-coding-boot-camp-seeks-to-reset-japan-inc-idUSKBN1JF32A">
-                <span> Reuters</span>
-              </Link>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <Chat />
-              </span>
-              <Link href="http://www.workers-u.com/le-wagon-tokyo/">
-                <span> Workers University</span>
-              </Link>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <Chat />
-              </span>
-              <Link href="https://vivreatokyo.com/paul-gaumer-podcasts-japan-life-stories.html">
-                <span> Vivre à Tokyo</span>
-              </Link>
-            </li>
-            <li className="flex items-center space-x-2">
-              <span>
-                <Chat />
-              </span>
-              <Link href="http://radio-g.fr/internet/index.php?numarticle=1416">
-                <span> Radio Nippon</span>
-              </Link>
-            </li>
-          </ul>
+          <div>
+            <ul className="grid grid-cols-2">
+              <li className="flex items-center space-x-2">
+                <span>
+                  <Chat />
+                </span>
+                <Link href="https://r.nikkei.com/article/DGXMZO33502780X20C18A7FFR000?s=3">
+                  <span> Nikkei</span>
+                </Link>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  <Chat />
+                </span>
+                <Link href="https://jp.techcrunch.com/2017/01/27/le-wagon-tokyo-launch/">
+                  <span> TechCrunch</span>
+                </Link>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  <Chat />
+                </span>
+                <Link href="https://thebridge.jp/2017/12/announcing-le-wagon-tokyo-2018">
+                  <span> The Bridge</span>
+                </Link>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  <Chat />
+                </span>
+                <Link href="https://www.reuters.com/article/us-japan-coding-bootcamp/silicon-valley-style-coding-boot-camp-seeks-to-reset-japan-inc-idUSKBN1JF32A">
+                  <span> Reuters</span>
+                </Link>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  <Chat />
+                </span>
+                <Link href="http://www.workers-u.com/le-wagon-tokyo/">
+                  <span> Workers University</span>
+                </Link>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  <Chat />
+                </span>
+                <Link href="https://vivreatokyo.com/paul-gaumer-podcasts-japan-life-stories.html">
+                  <span> Vivre à Tokyo</span>
+                </Link>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span>
+                  <Chat />
+                </span>
+                <Link href="http://radio-g.fr/internet/index.php?numarticle=1416">
+                  <span> Radio Nippon</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </AboutSection>
       </SectionContainer>
     </Layout>

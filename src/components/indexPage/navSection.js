@@ -1,17 +1,40 @@
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import styled from "styled-components"
+import tw from "twin.macro"
 import SectionContainer from "../layout/sectionContainer"
+import Link from "../global/link"
+
+const Title = styled.h2`
+  a {
+    ${tw`text-gray-900! hover:text-gray-900!`}
+  }
+`
 
 const NavItem = ({ href, title, description }) => {
   return (
-    <div>
-      <Link
-        to={href}
-        className="text-2xl font-semibold text-gray-900 capitalize md:text-2xl lg:text-2-5xl"
-      >
-        <h3>{title}</h3>
-      </Link>
+    <div className="prose">
+      <Title className="flex items-center space-x-2 capitalize">
+        <Link href={href} gatsbyLink={true}>
+          {title}
+        </Link>
+        <span className="mt-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-4 h-4"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </span>
+      </Title>
       <p className="mt-2 md:mt-4 lg:mt-6">{description}</p>
     </div>
   )
@@ -22,9 +45,9 @@ const NavSection = () => {
     <SectionContainer>
       <ul
         data-testid="nav-section"
-        className="mt-16 md:text-lg lg:grid lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16"
+        className="flex flex-col mt-16 space-y-12 lg:space-y-0 md:text-lg lg:grid lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16"
       >
-        <li className="">
+        <li>
           <NavItem
             href="#portfolio"
             title="portfolio"
@@ -34,7 +57,7 @@ const NavSection = () => {
         velit sapiente culpa!"
           />
         </li>
-        <li className="">
+        <li>
           <NavItem
             href="/about"
             title="about"
@@ -44,7 +67,7 @@ const NavSection = () => {
         velit sapiente culpa!"
           />
         </li>
-        <li className="">
+        <li>
           <NavItem
             href="/blog"
             title="blog"

@@ -6,7 +6,6 @@ const HeroSection = () => {
   return (
     <SectionContainer>
       {/* TITLE */}
-      <div></div>
       <h1
         data-testid="hero-title"
         className="mt-8 mb-6 text-5xl font-semibold leading-tight text-gray-800 md:mb-10 xl:mb-16 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl md:mt-16 xl:mt-24"
@@ -14,12 +13,10 @@ const HeroSection = () => {
         Hi, I'm Paul!
       </h1>
       {/* DESCRIPTION */}
-      <p
-        data-testid="hero-bio"
-        className="mt-6 text-lg antialiased text-gray-700 md:text-xl lg:text-2xl"
-      >
-        My name is Paul Gaumer. I am a software developer focusing on creating
-        accessible and smooth web experiences.
+      <p data-testid="hero-bio" className="prose prose-2xl">
+        <span className="hidden sm:inline-block">My name is Paul Gaumer.</span>{" "}
+        I am a software developer focusing on creating smooth and accessible web
+        experiences.
       </p>
       {/* IMAGE */}
       <div className="mt-12">

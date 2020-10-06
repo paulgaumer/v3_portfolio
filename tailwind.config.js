@@ -16,7 +16,23 @@ module.exports = {
         bluePrimary: "#202E44",
       },
     },
+    typography: theme => ({
+      default: {
+        css: {
+          a: {
+            color: theme(`colors.blue.600`),
+            textDecoration: `none`,
+            "&:hover": {
+              textDecoration: `underline`,
+            },
+          },
+          "ul > li::before": {
+            content: "none",
+          },
+        },
+      },
+    }),
   },
   variants: {},
-  plugins: [require("@tailwindcss/ui")],
+  plugins: [require("@tailwindcss/ui"), require("@tailwindcss/typography")],
 }
