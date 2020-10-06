@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 /* CUSTOM CSS */
 html,
 body {
   scroll-behavior: smooth;
 }
+
+@tailwind utilities;
