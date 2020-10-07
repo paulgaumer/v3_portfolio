@@ -20,6 +20,7 @@ const PortfolioSection = ({ projects }) => {
               index={index}
               title={project.title}
               description={project.description}
+              blockDescription={project._rawBlockDescription}
               url={project.url}
               frontImage={project.frontImage}
               backImage={project.backImage}

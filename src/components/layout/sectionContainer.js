@@ -18,4 +18,5 @@ SectionContainer.propTypes = {
 }
 SectionContainer.defaultProps = {
   maxWidth: "max-w-xl lg:max-w-3xl",
+  customClasses: "",
 }

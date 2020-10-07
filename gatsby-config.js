@@ -1,3 +1,5 @@
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
+
 module.exports = {
   siteMetadata: {
     title: `Paul Gaumer`,
@@ -16,8 +18,9 @@ module.exports = {
     {
       resolve: `gatsby-source-sanity`,
       options: {
-        projectId: `5myts4xb`,
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
         dataset: `production`,
+        watchMode: true,
         // a token with read permissions is required
         // if you have a private dataset
         // token: process.env.SANITY_TOKEN,

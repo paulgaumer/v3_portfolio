@@ -5,7 +5,7 @@ import linkedin from "../../images/linkedin.svg"
 
 const Footer = () => {
   return (
-    <div data-name="footer-wrapper" className="mt-20 bg-gray-800">
+    <div data-name="footer-wrapper" className="bg-gray-800 mt-52">
       <footer className="px-10 pt-16 pb-5 mx-auto text-white max-w-7xl">
         <div className="mb-10 text-center md:mb-16">
           <h4 className="antialiased text-yellowPrimary">Next step?</h4>

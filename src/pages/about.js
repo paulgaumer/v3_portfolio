@@ -6,6 +6,7 @@ import SectionContainer from "../components/layout/sectionContainer"
 import AboutSection from "../components/aboutPage/aboutSection"
 import SectionIntro from "../components/global/sectionIntro"
 import Link from "../components/global/link"
+import PageTitle from "../components/global/pageTitle"
 import ArrowRight from "../components/icons/arrowRight"
 import Pen from "../components/icons/pen"
 import Mic from "../components/icons/mic"
@@ -17,13 +18,8 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <SectionContainer>
-        <h1
-          data-testid="page-title"
-          className="mt-8 mb-6 text-5xl font-semibold leading-tight text-gray-800 md:mb-10 xl:mb-16 md:text-6xl lg:text-7xl lg:font-medium xl:text-8xl md:mt-16 xl:mt-24"
-        >
-          About
-        </h1>
-        <div data-testid="hero-bio" className="prose md:prose-xl">
+        <PageTitle>About</PageTitle>
+        <div data-testid="hero-bio">
           <SectionIntro>
             <p>
               My name is Paul Gaumer and I am a French developer and startup

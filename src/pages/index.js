@@ -29,19 +29,16 @@ export const query = graphql`
           id
           title
           url
-          description
+          _rawBlockDescription
           frontImage {
             asset {
               fluid {
                 ...GatsbySanityImageFluid
               }
             }
-          }
-          backImage {
-            asset {
-              fluid {
-                ...GatsbySanityImageFluid
-              }
+            hotspot {
+              x
+              y
             }
           }
         }

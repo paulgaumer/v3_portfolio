@@ -4,19 +4,14 @@ import ImageHot from "../global/imageHot"
 import numberIsEven from "../../utils/numberIsEven"
 import Github from "../icons/github"
 import ExternalLink from "../icons/externalLink"
+import PortableText from "@sanity/block-content-to-react"
+import { serializers } from "../../utils/portableTextSerializer"
 
-const PortfolioCard = ({
-  index,
-  title,
-  description,
-  url,
-  frontImage,
-  // backImage,
-}) => {
+const PortfolioCard = ({ index, title, url, frontImage, blockDescription }) => {
   return (
     <div
       data-testid="project-card"
-      className={`lg:flex w-full lg:space-x-14 ${
+      className={`flex flex-col lg:flex-row w-full lg:space-x-14 ${
         numberIsEven(index + 1) ? "lg:flex-row-reverse lg:space-x-reverse" : ""
       }`}
     >
@@ -34,8 +29,8 @@ const PortfolioCard = ({
         <h3 className="text-2xl font-semibold text-center text-gray-900 mb-7">
           {title}
         </h3>
-        <p className="mb-6 leading-relaxed md:text-lg">{description}</p>
-        <div className="flex space-x-3">
+        <PortableText blocks={blockDescription} serializers={serializers} />
+        <div className="flex mt-2 space-x-3">
           <a
             href={url}
             target="_blank"
