@@ -4,21 +4,26 @@ import styled from "styled-components"
 import tw from "twin.macro"
 import SectionContainer from "../layout/sectionContainer"
 import Link from "../global/link"
+// import { Link } from "gatsby"
 
 const Title = styled.h2`
-  ${tw`mb-2! lg:mb-5!`}
-  a {
+  ${tw`mb-2! lg:mb-5!`}/* a {
     ${tw`text-gray-900! hover:text-gray-900!`}
-  }
+  } */
 `
 
 const NavItem = ({ href, title, children }) => {
   return (
     <div className="prose">
       <Title className="flex items-center space-x-2 capitalize">
-        <Link href={href} gatsbyLink={true}>
+        <Link
+          href={href}
+          gatsbyLink={true}
+          colors={"text-gray-900! hover:text-gray-900!"}
+        >
           {title}
         </Link>
+        {/* <Link to={href}>{title}</Link> */}
         <span className="mt-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
