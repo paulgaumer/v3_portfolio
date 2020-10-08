@@ -46,6 +46,5 @@ CustomLink.propTypes = {
 CustomLink.defaultProps = {
   gatsbyLink: false,
   target: true,
-  colors: false,
   customClasses: "",
 }

@@ -70,7 +70,16 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:w-1/2">
-            <form className="w-full space-y-6" data-testid="footer-form">
+            <form
+              className="w-full space-y-6"
+              data-testid="footer-form"
+              method="post"
+              name="contact-footer"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact-footer" />
               <input
                 aria-label="Email address"
                 required
