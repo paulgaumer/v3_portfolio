@@ -3,8 +3,9 @@ require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 module.exports = {
   siteMetadata: {
     title: `Paul Gaumer`,
-    description: `Paul Gaumer - Software Developer. Welcome to my site!`,
-    author: `@paulgaumer`,
+    description: `Paul Gaumer - Software Developer | I develop smooth and accessible web experiences with a focus on React and all things JAMStack`,
+    author: `@PaulGaumer`,
+    image: "/defaultImage.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
