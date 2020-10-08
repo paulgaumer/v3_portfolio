@@ -9,7 +9,7 @@ const PortfolioSection = ({ projects }) => {
       <div className="mt-20 md:mt-32 lg:mt-40" id="portfolio">
         <h2
           data-testid="portfolio-section-title"
-          className="max-w-xl mx-auto mb-8 text-4xl font-semibold leading-tight text-gray-800 md:mb-10 xl:mb-24 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl lg:max-w-3xl"
+          className="max-w-xl mx-auto mb-8 text-4xl font-semibold leading-tight text-gray-800 font-header md:mb-10 xl:mb-24 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl lg:max-w-3xl"
         >
           Portfolio
         </h2>

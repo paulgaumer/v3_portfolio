@@ -7,9 +7,7 @@ import Link from "../global/link"
 // import { Link } from "gatsby"
 
 const Title = styled.h2`
-  ${tw`mb-2! lg:mb-5!`}/* a {
-    ${tw`text-gray-900! hover:text-gray-900!`}
-  } */
+  ${tw`mb-2! lg:mb-5! font-header!`}
 `
 
 const NavItem = ({ href, title, children }) => {

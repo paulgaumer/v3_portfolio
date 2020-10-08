@@ -26,7 +26,7 @@ const PortfolioCard = ({ index, title, url, frontImage, blockDescription }) => {
         data-name="description-side"
         className={`flex flex-col items-center justify-center lg:w-1/2 lg:mt-0 mt-8`}
       >
-        <h3 className="text-2xl font-semibold text-center text-gray-900 mb-7">
+        <h3 className="text-2xl font-semibold text-center text-gray-900 font-header mb-7">
           {title}
         </h3>
         <PortableText blocks={blockDescription} serializers={serializers} />

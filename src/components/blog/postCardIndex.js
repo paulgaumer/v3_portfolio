@@ -9,7 +9,7 @@ import { excerpt } from "../../utils/excerpt"
 
 const Card = styled.div`
   h2 {
-    ${tw`mt-0! mb-2!`}
+    ${tw`mt-0! mb-2! font-header!`}
   }
   a {
     ${tw`hover:no-underline! text-gray-700! hover:text-gray-700!`}
@@ -39,7 +39,7 @@ const PostCardIndex = ({ post }) => {
         <p
           data-name="card-date"
           data-testid="card-date"
-          className="text-xs text-gray-500"
+          className="text-xs text-gray-500 font-header"
         >
           - {date}
         </p>

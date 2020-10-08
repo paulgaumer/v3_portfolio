@@ -6,6 +6,9 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      fontFamily: {
+        header: ["Poppins"],
+      },
       fontSize: {
         "7xl": "5rem",
         "8xl": "6rem",
@@ -20,6 +23,15 @@ module.exports = {
       default: {
         css: {
           color: theme("colors.gray.700"),
+          h1: {
+            fontFamily: theme("fontFamily.header"),
+          },
+          h2: {
+            fontFamily: theme("fontFamily.header"),
+          },
+          h3: {
+            fontFamily: theme("fontFamily.header"),
+          },
           a: {
             color: false,
             textDecoration: `none`,

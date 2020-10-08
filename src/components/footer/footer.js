@@ -8,8 +8,13 @@ const Footer = () => {
     <div data-name="footer-wrapper" className="flex-shrink-0 bg-gray-800 mt-52">
       <footer className="px-10 pt-16 pb-5 mx-auto text-white max-w-7xl">
         <div className="mb-10 text-center md:mb-16">
-          <h4 className="antialiased text-yellowPrimary">Next step?</h4>
-          <h3 data-testid="footer-title" className="mt-2 text-3xl uppercase">
+          <h4 className="antialiased font-header text-yellowPrimary">
+            Next step?
+          </h4>
+          <h3
+            data-testid="footer-title"
+            className="mt-2 text-3xl uppercase font-header"
+          >
             Let's work together!
           </h3>
         </div>
