@@ -2,7 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const AboutSection = ({ children, customClasses }) => {
-  return <section className={`mt-20 ${customClasses}`}>{children}</section>
+  return (
+    <section data-testid="about-section" className={`mt-20 ${customClasses}`}>
+      {children}
+    </section>
+  )
 }
 
 export default AboutSection

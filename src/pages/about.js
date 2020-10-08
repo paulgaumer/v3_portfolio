@@ -48,7 +48,9 @@ const About = () => {
         </div>
 
         <AboutSection customClasses="prose md:prose-lg">
-          <h2 className="">Startups in Japan</h2>
+          <h2 data-testid="about-section-title" className="">
+            Startups in Japan
+          </h2>
           <p>
             I spent the past 10 years living in Japan where I've been blessed to
             experience many roles, starting with a first career in sales and
@@ -145,7 +147,9 @@ const About = () => {
           </div>
         </AboutSection>
         <AboutSection customClasses="prose md:prose-lg">
-          <h2 className="">Talks</h2>
+          <h2 data-testid="about-section-title" className="">
+            Talks
+          </h2>
           <p>
             I have been fortunate to run numerous workshops and to be invited to
             events and panels as a speaker, including:
@@ -244,7 +248,10 @@ const About = () => {
           </div>
         </AboutSection>
         <AboutSection customClasses="prose md:prose-lg">
-          <h2 className="text-2xl font-semibold text-gray-900 capitalize md:text-2xl lg:text-2-5xl">
+          <h2
+            data-testid="about-section-title"
+            className="text-2xl font-semibold text-gray-900 capitalize md:text-2xl lg:text-2-5xl"
+          >
             Press & Interviews
           </h2>
           <div>

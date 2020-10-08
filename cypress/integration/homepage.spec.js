@@ -4,7 +4,7 @@ describe("Homepage", () => {
   })
 
   it("Render a H1 displaying a name", () => {
-    cy.findByTestId("hero-title").contains("Paul")
+    cy.findByTestId("page-title").contains("Paul")
   })
   it("Render a short bio", () => {
     cy.findByTestId("hero-bio").contains("Paul Gaumer")
@@ -15,7 +15,6 @@ describe("Homepage", () => {
   it('Render an internal link navigating to "#portfolio"', () => {
     cy.get("[data-testid=nav-section] a")
       .contains(/portfolio/i)
-      .parent()
       .should("have.attr", "href", "/#portfolio")
       .click()
     // .url()
@@ -25,7 +24,6 @@ describe("Homepage", () => {
     cy.visit("/")
     cy.get("[data-testid=nav-section] a")
       .contains(/about/i)
-      .parent()
       .should("have.attr", "href", "/about")
       .click()
     // .url()
@@ -35,7 +33,6 @@ describe("Homepage", () => {
     cy.visit("/")
     cy.get("[data-testid=nav-section] a")
       .contains(/blog/i)
-      .parent()
       .should("have.attr", "href", "/blog")
       .click()
     // .url()

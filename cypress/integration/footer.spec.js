@@ -22,7 +22,7 @@ describe("Footer", () => {
       .get('[href=""]')
       .should("not.exist")
   })
-  it.only("Form can submit a message", () => {
+  it("Form can submit a message", () => {
     const email = "test@test.com"
     const desc = "This is a test message"
     cy.get("[data-testid='footer-form'] input")
