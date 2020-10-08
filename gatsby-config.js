@@ -6,6 +6,7 @@ module.exports = {
     description: `Paul Gaumer - Software Developer | I develop smooth and accessible web experiences with a focus on React and all things JAMStack`,
     author: `@PaulGaumer`,
     image: "/defaultImage.png",
+    siteUrl: `https://www.paulgaumer.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -44,6 +45,8 @@ module.exports = {
         trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
       },
     },
+    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
