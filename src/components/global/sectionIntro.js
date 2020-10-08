@@ -3,7 +3,14 @@ import PropTypes from "prop-types"
 
 const SectionIntro = ({ children, customClasses }) => {
   const defaultClasses = "prose md:prose-xl"
-  return <div className={`${customClasses ?? defaultClasses}`}>{children}</div>
+  return (
+    <div
+      data-testid="section-intro"
+      className={`${customClasses ?? defaultClasses}`}
+    >
+      {children}
+    </div>
+  )
 }
 
 export default SectionIntro

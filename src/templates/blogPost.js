@@ -12,10 +12,10 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title="" />
-      <SectionContainer customClasses="">
+      <SectionContainer>
         <article>
           <PostTitle publishedAt={publishedAt}>{title}</PostTitle>
-          <div className="prose prose-lg">
+          <div data-testid="post-content" className="prose prose-lg">
             <PortableText
               blocks={_rawBlockDescription}
               serializers={serializers}

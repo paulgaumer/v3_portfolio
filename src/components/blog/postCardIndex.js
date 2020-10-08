@@ -30,16 +30,22 @@ const PostCardIndex = ({ post }) => {
   const description = excerpt(post.blockDescription[0]?.children[0]?.text)
 
   return (
-    <Card className="prose">
+    <Card data-testid="post-card" className="prose">
       <Link href={`/blog/${slug}`} gatsbyLink={true} customClasses="group">
         <div className="relative inline-block">
           <h2 className="relative z-10">{title}</h2>
           <div className="absolute left-0 right-0 z-0 hidden h-2 bottom-3 group-hover:block bg-yellowSecondary" />
         </div>
-        <p data-name="card-date" className="text-xs text-gray-500">
+        <p
+          data-name="card-date"
+          data-testid="card-date"
+          className="text-xs text-gray-500"
+        >
           - {date}
         </p>
-        <p data-name="card-description">{description}</p>
+        <p data-name="card-description" data-testid="card-description">
+          {description}
+        </p>
         <button className="flex items-center space-x-2 text-sm font-bold">
           <span>Read More</span>
           <span className="hidden group-hover:inline-block">
