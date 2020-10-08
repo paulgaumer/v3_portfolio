@@ -1,8 +1,8 @@
 import React from "react"
-// import urlBuilder from "@sanity/image-url"
 import Link from "../components/global/link"
+import CodeHighlighter from "../components/global/codeHighlighter"
+// import urlBuilder from "@sanity/image-url"
 // import getYoutubeId from "get-youtube-id"
-// import styled from "styled-components"
 
 // Custom component styled to spread full width while retaining a correct height
 // const YoutubeContainer = styled.div`
@@ -41,6 +41,9 @@ export const serializers = {
         default:
           return <p>{props.children}</p>
       }
+    },
+    code: props => {
+      return <CodeHighlighter content={props.node} />
     },
     // youtube(props) {
     //   const id = getYoutubeId(props.node.url)

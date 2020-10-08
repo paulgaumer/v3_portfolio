@@ -64,8 +64,7 @@ export default PortfolioCard
 PortfolioCard.propTypes = {
   index: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  blockDescription: PropTypes.arrayOf(PropTypes.object).isRequired,
   url: PropTypes.string.isRequired,
   frontImage: PropTypes.object.isRequired,
-  // backImage: PropTypes.object.isRequired,
 }

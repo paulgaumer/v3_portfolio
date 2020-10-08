@@ -27,6 +27,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-syntax-highlighter": "^15.2.0",
     "styled-components": "^5.2.0",
     "tailwindcss": "^1.8.10",
     "twin.macro": "^1.10.0"

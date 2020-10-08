@@ -12,7 +12,7 @@ const Title = styled.h2`
   }
 `
 
-const NavItem = ({ href, title, description }) => {
+const NavItem = ({ href, title, children }) => {
   return (
     <div className="prose">
       <Title className="flex items-center space-x-2 capitalize">
@@ -36,7 +36,7 @@ const NavItem = ({ href, title, description }) => {
           </svg>
         </span>
       </Title>
-      <p className="mt-2 md:mt-4 lg:mt-6 md:prose-lg">{description}</p>
+      <div className="mt-2 md:mt-4 lg:mt-6 md:prose-lg">{children}</div>
     </div>
   )
 }
@@ -49,34 +49,30 @@ const NavSection = () => {
         className="grid mt-16 space-y-12 lg:space-y-0 md:text-lg lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16"
       >
         <li>
-          <NavItem
-            href="#portfolio"
-            title="portfolio"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
-        suscipit ducimus quasi distinctio? Ipsum animi a mollitia voluptatum
-        optio, nam perspiciatis expedita tempore doloremque pariatur cumque aut
-        velit sapiente culpa!"
-          />
+          <NavItem href="#portfolio" title="portfolio">
+            <p>
+              A few of the projects I've worked and collaborated on. I currently
+              work as a freelance developer specialized in React and all things{" "}
+              <Link href="https://jamstack.org/">JAMStack</Link>.
+            </p>
+          </NavItem>
         </li>
         <li>
-          <NavItem
-            href="/about"
-            title="about"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
-        suscipit ducimus quasi distinctio? Ipsum animi a mollitia voluptatum
-        optio, nam perspiciatis expedita tempore doloremque pariatur cumque aut
-        velit sapiente culpa!"
-          />
+          <NavItem href="/about" title="about">
+            <p>
+              A brief overview of my past experiences and most recent
+              activities, including podcasting, workshop teaching and media
+              appearances.
+            </p>
+          </NavItem>
         </li>
         <li>
-          <NavItem
-            href="/blog"
-            title="blog"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
-        suscipit ducimus quasi distinctio? Ipsum animi a mollitia voluptatum
-        optio, nam perspiciatis expedita tempore doloremque pariatur cumque aut
-        velit sapiente culpa!"
-          />
+          <NavItem href="/blog" title="blog">
+            <p>
+              Discoveries, learnings and programming nuggets I'd like to keep in
+              mind while sharing with the community.
+            </p>
+          </NavItem>
         </li>
       </ul>
     </SectionContainer>
@@ -88,5 +84,4 @@ export default NavSection
 NavItem.propTypes = {
   href: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
 }
