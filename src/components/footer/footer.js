@@ -74,7 +74,7 @@ const Footer = () => {
               className="w-full space-y-6"
               data-testid="footer-form"
               method="post"
-              id="contact-footer"
+              id="contact-form"
               name="contact-footer"
               data-netlify="true"
               data-netlify-honeypot="bot-field"

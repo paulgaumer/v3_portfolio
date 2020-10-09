@@ -40,7 +40,7 @@ const About = () => {
 
             <p>
               I am open to local and remote projects.{" "}
-              <Link href="/about/#contact-footer" gatsbyLink={true}>
+              <Link href="/about/#contact-form" gatsbyLink={true}>
                 Let's talk!
               </Link>
             </p>
