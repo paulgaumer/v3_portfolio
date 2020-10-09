@@ -23,7 +23,7 @@ const Header = () => {
         <Link to="/">
           <Logo width="w-10" height="h-10" />
         </Link>
-        <ul className="flex items-center space-x-10">
+        <ul className="items-center hidden space-x-10 md:flex">
           <li>
             <NavLink href="/#portfolio" linkText="portfolio" />
           </li>
@@ -43,6 +43,51 @@ const Header = () => {
             />
           </li>
         </ul>
+        <div className="flex items-center -mr-2 sm:hidden">
+          {/* Mobile menu button */}
+          <button
+            className="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
+            aria-label="Main menu"
+            aria-expanded="false"
+            onClick={handleClick}
+          >
+            {/* Icon when menu is closed. */}
+            {/* <!--
+            Heroicon name: menu
+
+            Menu open: "hidden", Menu closed: "block"
+          --> */}
+            <svg
+              className={`block w-6 h-6 ${isMenuOpen ? "hidden" : "block"}`}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            {/* Icon when menu is open. */}
+            <svg
+              className={`block w-6 h-6 ${isMenuOpen ? "block" : "hidden"}`}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
     </header>
   )
