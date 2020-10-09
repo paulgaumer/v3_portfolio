@@ -82,15 +82,17 @@ const Footer = () => {
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contact-footer" />
               <input
-                aria-label="Email address"
                 required
+                aria-label="Email"
                 type="email"
+                name="email"
                 placeholder="Enter your email"
                 className="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none focus:outline-none focus:placeholder-gray-400"
               />
               <textarea
-                aria-label="Email address"
                 required
+                aria-label="Message"
+                name="message"
                 placeholder="How can I help you?"
                 className="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none focus:outline-none focus:placeholder-gray-400"
               />
