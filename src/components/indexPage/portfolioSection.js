@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import SectionContainer from "../layout/sectionContainer"
 import PortfolioCard from "../portfolio/portfolioCard"
+import Fade from "react-reveal/Fade"
 
 const PortfolioSection = ({ projects }) => {
   return (
@@ -15,16 +16,18 @@ const PortfolioSection = ({ projects }) => {
         </h2>
         <div className="mt-16 space-y-32">
           {projects.map((project, index) => (
-            <PortfolioCard
-              key={project.id}
-              index={index}
-              title={project.title}
-              description={project.description}
-              blockDescription={project._rawBlockDescription}
-              url={project.url}
-              frontImage={project.frontImage}
-              backImage={project.backImage}
-            />
+            <Fade bottom>
+              <PortfolioCard
+                key={project.id}
+                index={index}
+                title={project.title}
+                description={project.description}
+                blockDescription={project._rawBlockDescription}
+                url={project.url}
+                frontImage={project.frontImage}
+                backImage={project.backImage}
+              />
+            </Fade>
           ))}
         </div>
       </div>
