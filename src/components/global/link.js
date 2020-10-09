@@ -8,15 +8,19 @@ const CustomLink = ({
   href,
   target,
   colors,
+  underline,
   customClasses,
 }) => {
   const defaultColors = `text-blue-600 hover:text-blue-700`
+  const defaultUnderline = `no-underline hover:underline`
 
   if (!gatsbyLink) {
     return (
       <a
         href={href}
-        className={`${colors ?? defaultColors} ${customClasses}`}
+        className={`${colors ?? defaultColors} ${
+          underline ?? defaultUnderline
+        } ${customClasses}`}
         target={target ? "_blank" : ""}
         rel={target ? "noopener noreferrer" : ""}
       >
@@ -25,7 +29,12 @@ const CustomLink = ({
     )
   } else {
     return (
-      <Link to={href} className={`${colors ?? defaultColors} ${customClasses}`}>
+      <Link
+        to={href}
+        className={`${colors ?? defaultColors} ${
+          underline ?? defaultUnderline
+        } ${customClasses}`}
+      >
         {children}
       </Link>
     )
@@ -38,6 +47,7 @@ CustomLink.propTypes = {
   gatsbyLink: PropTypes.bool,
   href: PropTypes.string,
   colors: PropTypes.string,
+  underline: PropTypes.string,
   target: PropTypes.bool,
   customClasses: PropTypes.string,
   children: PropTypes.node,

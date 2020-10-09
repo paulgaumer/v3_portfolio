@@ -34,9 +34,9 @@ module.exports = {
           },
           a: {
             color: false,
-            textDecoration: `none`,
+            textDecoration: false,
             "&:hover": {
-              textDecoration: `underline`,
+              textDecoration: false,
             },
           },
           "ul > li::before": {

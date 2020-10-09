@@ -55,8 +55,8 @@ const NavSection = () => {
           <NavItem href="#portfolio" title="portfolio">
             <p>
               A few of the projects I've worked and collaborated on. I currently
-              work as a freelance developer specialized in React and all things{" "}
-              <Link href="https://jamstack.org/">JAMStack</Link>.
+              work as a freelance developer specialized in React, JavaScript and
+              all things <Link href="https://jamstack.org/">JAMStack</Link>.
             </p>
           </NavItem>
         </li>

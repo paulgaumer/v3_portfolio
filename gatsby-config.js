@@ -3,7 +3,7 @@ require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 module.exports = {
   siteMetadata: {
     title: `Paul Gaumer`,
-    description: `Paul Gaumer - Software Developer | I develop smooth and accessible web experiences with a focus on React and all things JAMStack`,
+    description: `Paul Gaumer - Software Developer | I develop smooth and accessible web experiences with a focus on React, JavaScript and all things JAMStack`,
     author: `@PaulGaumer`,
     image: "/defaultImage.png",
     siteUrl: `https://www.paulgaumer.com`,

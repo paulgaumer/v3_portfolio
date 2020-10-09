@@ -31,24 +31,50 @@ const PostCardIndex = ({ post }) => {
 
   return (
     <Card data-testid="post-card" className="prose">
-      <Link href={`/blog/${slug}`} gatsbyLink={true} customClasses="group">
-        <div className="relative inline-block">
-          <h2 className="relative z-10">{title}</h2>
-          <div className="absolute left-0 right-0 z-0 hidden h-2 bottom-3 group-hover:block bg-yellowSecondary" />
+      <Link
+        href={`/blog/${slug}`}
+        gatsbyLink={true}
+        customClasses="group"
+        colors=""
+        underline="no-underline hover:no-underline"
+      >
+        <div
+          className="relative inline-block"
+          style={{ position: "relative !important" }}
+        >
+          <h2
+            className="relative z-10"
+            style={{
+              position: "relative !important",
+              marginTop: "0 !important",
+              marginBottom: "0.5rem !important",
+            }}
+          >
+            {title}
+          </h2>
+          <div
+            className="absolute left-0 right-0 z-0 hidden h-2 bottom-3 group-hover:block bg-yellowSecondary"
+            style={{ position: "absolute !important" }}
+          />
         </div>
         <p
           data-name="card-date"
           data-testid="card-date"
           className="text-xs text-gray-500 font-header"
+          style={{ marginTop: "0 !important" }}
         >
           - {date}
         </p>
-        <p data-name="card-description" data-testid="card-description">
+        <p
+          data-name="card-description"
+          data-testid="card-description"
+          style={{ marginBottom: "0.5rem !important" }}
+        >
           {description}
         </p>
         <button className="flex items-center space-x-2 text-sm font-bold">
           <span>Read More</span>
-          <span className="hidden group-hover:inline-block">
+          <span className="hidden mt-1 group-hover:inline-block">
             <ArrowRight />
           </span>
         </button>

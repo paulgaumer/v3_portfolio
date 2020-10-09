@@ -11,7 +11,7 @@ const BlogPost = ({ data }) => {
   const { title, _rawBlockDescription, publishedAt } = data.sanityBlogPost
   return (
     <Layout>
-      <SEO title="" />
+      <SEO title={title} />
       <SectionContainer>
         <article>
           <PostTitle publishedAt={publishedAt}>{title}</PostTitle>

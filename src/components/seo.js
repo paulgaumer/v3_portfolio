@@ -73,7 +73,7 @@ function SEO({ description, lang, meta, title }) {
         {
           name: "keywords",
           content:
-            "Software Developer, Web Developer, Front End Developer, Front-End Developer, React, ReactJS, React.js, JavaScript, JAMStack, Gatsby, GatsbyJS, Gatsby.js, Next, NextJS, Next.js, Sanity, Netlify, Web Design",
+            "Software Developer, Web Developer, Front End Developer, Front-End Developer, React, ReactJS, React.js, JavaScript, JAMStack, Gatsby, GatsbyJS, Gatsby.js, Next, NextJS, Next.js, Tailwind, Sanity, Netlify, CSS, HTML, Landing Page, Lighthouse, Coding, Programming, Teaching, Web Design",
         },
       ].concat(meta)}
     />
