@@ -4,7 +4,6 @@ import styled from "styled-components"
 import tw from "twin.macro"
 import SectionContainer from "../layout/sectionContainer"
 import Link from "../global/link"
-// import { Link } from "gatsby"
 
 const Title = styled.h2`
   ${tw`mb-2! lg:mb-5! font-header!`}
@@ -49,7 +48,7 @@ const NavSection = () => {
     <SectionContainer>
       <ul
         data-testid="nav-section"
-        className="grid mt-16 space-y-12 lg:space-y-0 md:text-lg lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16"
+        className="grid mt-16 gap-y-4 md:text-lg lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16"
       >
         <li>
           <NavItem href="#portfolio" title="portfolio">
