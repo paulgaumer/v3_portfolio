@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import tw from "twin.macro"
+import { AnimatePresence, motion } from "framer-motion"
 import SectionContainer from "../layout/sectionContainer"
 import Link from "../global/link"
 
@@ -50,31 +51,47 @@ const NavSection = () => {
         data-testid="nav-section"
         className="grid mt-16 gap-y-4 md:text-lg lg:grid-cols-2 lg:gap-x-12 lg:gap-y-16"
       >
-        <li>
-          <NavItem href="#portfolio" title="portfolio">
-            <p>
-              A few of the projects I've worked and collaborated on. I currently
-              work as a freelance developer specialized in React, JavaScript and
-              all things <Link href="https://jamstack.org/">JAMStack</Link>.
-            </p>
-          </NavItem>
-        </li>
-        <li>
-          <NavItem href="/about" title="about">
-            <p>
-              A brief overview of my past experiences and most recent
-              activities, including podcasting, workshop teaching and press.
-            </p>
-          </NavItem>
-        </li>
-        <li>
-          <NavItem href="/blog" title="blog">
-            <p>
-              Discoveries, learnings and programming nuggets I'd like to keep in
-              mind while sharing with the community.
-            </p>
-          </NavItem>
-        </li>
+        <AnimatePresence>
+          <motion.li
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}
+          >
+            <NavItem href="#portfolio" title="portfolio">
+              <p>
+                A few of the projects I've worked and collaborated on. I
+                currently work as a freelance developer specialized in React,
+                JavaScript and all things{" "}
+                <Link href="https://jamstack.org/">JAMStack</Link>.
+              </p>
+            </NavItem>
+          </motion.li>
+        </AnimatePresence>
+        <AnimatePresence>
+          <motion.li
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}
+          >
+            <NavItem href="/about" title="about">
+              <p>
+                A brief overview of my past experiences and most recent
+                activities, including podcasting, workshop teaching and press.
+              </p>
+            </NavItem>
+          </motion.li>
+        </AnimatePresence>
+        <AnimatePresence>
+          <motion.li
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}
+          >
+            <NavItem href="/blog" title="blog">
+              <p>
+                Discoveries, learnings and programming nuggets I'd like to keep
+                in mind while sharing with the community.
+              </p>
+            </NavItem>
+          </motion.li>
+        </AnimatePresence>
       </ul>
     </SectionContainer>
   )
