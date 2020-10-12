@@ -17,8 +17,9 @@ const Blog = ({ data }) => {
         <PageTitle>Blog</PageTitle>
         <SectionIntro>
           <p>
-            Mostly short posts explaining discoveries, learnings and programming
-            nuggets I'd like to keep in mind while sharing with the community.
+            A series of short posts explaining discoveries, learnings and
+            programming nuggets I'd like to keep in mind while sharing with the
+            community.
           </p>
         </SectionIntro>
         <div className="flex flex-col mt-20 space-y-16">
