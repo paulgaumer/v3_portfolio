@@ -1,14 +1,33 @@
-import React from "react"
+import React, { useState, useContext } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import SectionContainer from "../layout/sectionContainer"
 import PageTitle from "../global/pageTitle"
-import paul from "../../images/paul-studio.jpg"
+import paul from "../../images/paul.jpg"
+import ColorWheel from "../global/colorWheel"
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+} from "../../context/contextProvider"
 
 const HeroSection = () => {
+  const dispatch = useContext(GlobalDispatchContext)
+  // const { themeColor } = useContext(GlobalStateContext)
+  const [currentColor, setCurrentColor] = useState("yellow")
+
+  const changeTheme = () => {
+    const newColor = currentColor === "yellow" ? "teal" : "yellow"
+    dispatch({
+      type: "changeTheme",
+      payload: newColor,
+    })
+    setCurrentColor(newColor)
+  }
+
   return (
     <SectionContainer>
       <AnimatePresence>
         <motion.div
+          className="flex items-center justify-between"
           initial={{ opacity: 0, x: -50 }}
           animate={{
             opacity: 1,
@@ -16,7 +35,20 @@ const HeroSection = () => {
             transition: { delay: 0.2 },
           }}
         >
-          <PageTitle>Hi, I'm Paul!</PageTitle>
+          <PageTitle>
+            <span>Hi, I'm Paul!</span>
+          </PageTitle>
+
+          <motion.div
+            className="mt-8 md:mt-16 xl:mt-24"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { delay: 0.9 },
+            }}
+          >
+            <ColorWheel />
+          </motion.div>
         </motion.div>
       </AnimatePresence>
       <AnimatePresence>

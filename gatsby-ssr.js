@@ -1,7 +1,7 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+// Allows us to keep the state given by React Context on page change. Element represents our site's root
+const React = require("react")
+const GlobalContextProvider = require("./src/context/contextProvider").default
 
-// You can delete this file if you're not using it
+exports.wrapRootElement = ({ element }) => {
+  return <GlobalContextProvider>{element}</GlobalContextProvider>
+}
