@@ -10,18 +10,18 @@ const Title = styled.h2`
   ${tw`mb-2! lg:mb-5! font-header!`}
 `
 
-const NavItem = ({ href, title, children }) => {
+const NavItem = ({ href, title, children, gatsbyLink = true }) => {
   return (
     <div className="prose">
       <Title className="flex items-center space-x-2 capitalize">
         <Link
           href={href}
-          gatsbyLink={true}
+          gatsbyLink={gatsbyLink}
+          target={gatsbyLink}
           colors={"text-gray-900! hover:text-gray-900!"}
         >
           {title}
         </Link>
-        {/* <Link to={href}>{title}</Link> */}
         <span className="mt-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ const NavSection = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.4 } }}
           >
-            <NavItem href="#portfolio" title="portfolio">
+            <NavItem href="#portfolio" title="portfolio" gatsbyLink={false}>
               <p>
                 A few of the projects I've worked and collaborated on. I
                 currently work as a freelance developer specialized in React,
@@ -102,4 +102,6 @@ export default NavSection
 NavItem.propTypes = {
   href: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  gatsbyLink: PropTypes.bool,
 }

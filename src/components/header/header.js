@@ -35,13 +35,7 @@ const Header = () => {
             <NavLink href="/blog" linkText="blog" gatsbyLink={true} />
           </li>
           <li>
-            <NavLink
-              href={`${pathname}${
-                pathname === "/" ? "#contact-form" : "/#contact-form"
-              }`}
-              linkText="contact"
-              gatsbyLink={true}
-            />
+            <NavLink href="#contact-form" linkText="contact" />
           </li>
         </ul>
         {/* Mobile menu button Start */}

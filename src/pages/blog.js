@@ -42,6 +42,7 @@ const Blog = ({ data }) => {
               initial="hidden"
               animate="visible"
               custom={i}
+              key={`post-${i}`}
             >
               <PostCard key={post.id} post={post} />
             </motion.li>

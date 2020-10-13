@@ -1,9 +1,9 @@
 import React, { useContext } from "react"
+import { GlobalStateContext } from "../../context/contextProvider"
 import yellow from "../../images/paul-yellow.jpg"
 import red from "../../images/paul-red.jpg"
 import blue from "../../images/paul-blue.jpg"
 import green from "../../images/paul-green.jpg"
-import { GlobalStateContext } from "../../context/contextProvider"
 
 const Portrait = ({ source }) => {
   return (
