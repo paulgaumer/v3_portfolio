@@ -1,4 +1,5 @@
 import React from "react"
+import { motion } from "framer-motion"
 import PropTypes from "prop-types"
 import PageTitle from "../components/global/pageTitle"
 import SectionIntro from "../components/global/sectionIntro"
@@ -22,11 +23,30 @@ const Blog = ({ data }) => {
             community.
           </p>
         </SectionIntro>
-        <div className="flex flex-col mt-20 space-y-16">
-          {posts.map(post => (
-            <PostCard key={post.id} post={post} />
+        <ul className="flex flex-col mt-20 space-y-16">
+          {posts.map((post, i) => (
+            <motion.li
+              variants={{
+                hidden: i => ({
+                  opacity: 0,
+                  y: -50 * i,
+                }),
+                visible: i => ({
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: i * 0.05,
+                  },
+                }),
+              }}
+              initial="hidden"
+              animate="visible"
+              custom={i}
+            >
+              <PostCard key={post.id} post={post} />
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </SectionContainer>
     </Layout>
   )
