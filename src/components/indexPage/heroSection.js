@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 import SectionContainer from "../layout/sectionContainer"
 import PageTitle from "../global/pageTitle"
@@ -6,6 +6,7 @@ import HeroPortrait from "./heroPortrait"
 import ColorWheel from "../global/colorWheel"
 
 const HeroSection = () => {
+  const [pulseOnce, setPulseOnce] = useState(false)
   return (
     <SectionContainer>
       {/* Slide from left on page load */}
@@ -26,14 +27,37 @@ const HeroSection = () => {
           {/* Fade in on page load */}
           <motion.div
             className=""
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: { delay: 1 },
+            variants={{
+              hidden: {
+                opacity: 0,
+                scale: 1.3,
+              },
+              visible: {
+                opacity: 1,
+                transition: {
+                  delay: 0.8,
+                },
+              },
             }}
-            whileHover={{ scale: 1.2 }}
+            initial="hidden"
+            animate="visible"
+            onAnimationComplete={() => setPulseOnce(true)}
           >
-            <ColorWheel />
+            <motion.div
+              variants={{
+                pulse: {
+                  scale: [1, 1.1, 1, 1.2, 1, 1],
+                  transition: {
+                    delay: 1,
+                  },
+                },
+              }}
+              animate={pulseOnce ? "pulse" : "null"}
+              onAnimationComplete={() => setPulseOnce(false)}
+              whileHover={{ scale: 1.2 }}
+            >
+              <ColorWheel />
+            </motion.div>
           </motion.div>
         </div>
       </motion.div>
