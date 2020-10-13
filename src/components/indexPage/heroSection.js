@@ -23,7 +23,7 @@ const HeroSection = () => {
           <span>Hi, I'm Paul!</span>
         </PageTitle>
 
-        <div className="flex justify-center flex-grow mt-8 md:mt-16 xl:mt-14">
+        <div className="justify-center flex-grow hidden mt-8 md:flex md:mt-16 xl:mt-14">
           {/* Fade in on page load */}
           <motion.div
             className=""
@@ -43,6 +43,7 @@ const HeroSection = () => {
             animate="visible"
             onAnimationComplete={() => setPulseOnce(true)}
           >
+            {/* Pulse once after page loaded */}
             <motion.div
               variants={{
                 pulse: {

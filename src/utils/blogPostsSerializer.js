@@ -82,6 +82,11 @@ export const serializers = {
     link: ({ children, mark }) => <Link href={mark.href}>{children}</Link>,
     strong: ({ children }) => <span className="font-bold">{children}</span>,
     em: ({ children }) => <span className="italic">{children}</span>,
+    code: ({ children }) => (
+      <span className="px-2 py-1 text-red-500 bg-gray-100 rounded">
+        {children}
+      </span>
+    ),
   },
   listItem: props => {
     switch (props.node.listItem) {
