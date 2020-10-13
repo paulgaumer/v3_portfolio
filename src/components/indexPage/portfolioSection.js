@@ -16,9 +16,8 @@ const PortfolioSection = ({ projects }) => {
         </h2>
         <div className="mt-16 space-y-32">
           {projects.map((project, index) => (
-            <Fade bottom>
+            <Fade bottom key={project.id}>
               <PortfolioCard
-                key={project.id}
                 index={index}
                 title={project.title}
                 description={project.description}

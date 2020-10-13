@@ -17,6 +17,7 @@ module.exports = {
         yellowPrimary: "#FEC878",
         yellowSecondary: "#FFB748",
         bluePrimary: "#202E44",
+        paulBlue: "#4CD9EE",
       },
     },
     typography: theme => ({

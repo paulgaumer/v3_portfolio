@@ -24,9 +24,13 @@ const GlobalContextProvider = ({ children }) => {
         bg: "bg-red-400",
         text: "text-red-400",
       },
-      teal: {
-        bg: "bg-teal-300",
-        text: "text-teal-300",
+      blue: {
+        bg: "bg-paulBlue",
+        text: "text-paulBlue",
+      },
+      green: {
+        bg: "bg-green-300",
+        text: "text-green-300",
       },
     },
   }

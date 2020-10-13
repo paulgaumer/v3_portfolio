@@ -1,6 +1,6 @@
 import React from "react"
+import { motion } from "framer-motion"
 import Fade from "react-reveal/Fade"
-import HeadShake from "react-reveal/HeadShake"
 import github from "../../images/github.svg"
 import twitter from "../../images/twitter.svg"
 import linkedin from "../../images/linkedin.svg"
@@ -13,14 +13,23 @@ const Footer = () => {
           <h4 className="antialiased font-header text-yellowPrimary">
             Next step?
           </h4>
-          <HeadShake>
-            <h3
-              data-testid="footer-title"
-              className="mt-2 text-3xl uppercase font-header"
-            >
-              Let's work together!
-            </h3>
-          </HeadShake>
+          <motion.h3
+            data-testid="footer-title"
+            className="mt-2 text-3xl uppercase font-header"
+            initial={{
+              opacity: 0,
+              scale: 0.8,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                duration: 1,
+              },
+            }}
+          >
+            Let's work together!
+          </motion.h3>
         </div>
         <div className="flex flex-col items-center mb-20 space-y-8 md:items-start md:space-y-0 md:space-x-16 md:flex-row">
           <div className="text-lg md:w-1/2">

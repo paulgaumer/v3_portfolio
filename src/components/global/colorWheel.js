@@ -1,24 +1,20 @@
-import React from "react"
+import React, { useState, useContext } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+} from "../../context/contextProvider"
 
 const Container = styled.div`
-  /* figure {
-    width: 250px;
-    height: 245px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -180px 0 0 -210px;
-    padding-left: 70px;
-    -webkit-transform: scale(0.7, 0.7);
-    transform: scale(0.7, 0.7);
-  } */
   .wheel {
     position: relative;
     width: 60px;
     height: 60px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    &:hover {
+      cursor: pointer;
+    }
   }
   .colorLeaf {
     width: 20px;
@@ -138,29 +134,86 @@ const Container = styled.div`
 `
 
 const ColorWheel = () => {
-  const divNumber = 19
+  const dispatch = useContext(GlobalDispatchContext)
+  const { themes } = useContext(GlobalStateContext)
+  const colorOptions = Object.keys(themes)
 
-  function onTapCancel(event, info) {
-    alert("Yoo")
+  const [isClicked, setIsClicked] = useState(false)
+  const [currentThemeIndex, setCurrentThemeIndex] = useState(0)
+
+  /**
+   * Define the new theme color based on the current index in the theme list
+   */
+  const changeTheme = () => {
+    const newIndex =
+      currentThemeIndex + 1 >= colorOptions.length ? 0 : currentThemeIndex + 1
+
+    const newColor = colorOptions[newIndex]
+    dispatch({
+      type: "changeTheme",
+      payload: newColor,
+    })
+    setCurrentThemeIndex(newIndex)
+  }
+
+  /**
+   * Activate the rotate animation and set the updated theme
+   */
+  const handleClick = () => {
+    setIsClicked(true)
+    changeTheme()
+  }
+
+  /**
+   * Stop the rotate animation
+   */
+  const handleAnimationComplete = () => {
+    setIsClicked(false)
+  }
+
+  const pulseKeyframe = [0, -10, 10, -10, 10, 0]
+  const pause = [0, 0, 0, 0, 0, 0]
+
+  const variants = {
+    clicked: {
+      rotate: [-360, 0],
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+    // pulse: {
+    //   x: [
+    //     ...pause,
+    //     ...pause,
+    //     ...pulseKeyframe,
+    //     ...pause,
+    //     ...pause,
+    //     ...pause,
+    //     ...pause,
+    //     ...pause,
+    //     ...pause,
+    //     ...pause,
+    //   ],
+    //   transition: {
+    //     duration: 5,
+    //     ease: "easeOut",
+    //     loop: Infinity,
+    //   },
+    // },
   }
 
   return (
     <Container>
       <motion.div
+        animate={isClicked ? "clicked" : "pulse"}
+        variants={variants}
+        onAnimationComplete={handleAnimationComplete}
+        onClick={handleClick}
         className="wheel"
-        animate={{
-          rotate: 360,
-          transition: {
-            delay: 2,
-            duration: 1,
-            ease: "easeInOut",
-            // loop: Infinity,
-          },
-        }}
-        whileTap={{ scale: 0.8 }}
-        // onClick={onTapCancel}
       >
-        {[...Array(divNumber)].map((e, i) => (
+        {/* Generate the needed number of divs to create the color leaves */}
+        {[...Array(19)].map((e, i) => (
           <div className="colorLeaf" key={i} />
         ))}
       </motion.div>
