@@ -18,19 +18,31 @@ const GlobalContextProvider = ({ children }) => {
     themes: {
       yellow: {
         bg: "bg-yellowSecondary",
-        text: "text-yellowSecondary",
+        tag: {
+          bg: "bg-yellowPrimary",
+          text: "text-yellow-900",
+        },
       },
       red: {
         bg: "bg-red-400",
-        text: "text-red-400",
+        tag: {
+          bg: "bg-red-100",
+          text: "text-red-800",
+        },
       },
       blue: {
         bg: "bg-paulBlue",
-        text: "text-paulBlue",
+        tag: {
+          bg: "bg-blue-100",
+          text: "text-blue-800",
+        },
       },
       green: {
         bg: "bg-green-300",
-        text: "text-green-300",
+        tag: {
+          bg: "bg-green-100",
+          text: "text-green-800",
+        },
       },
     },
   }

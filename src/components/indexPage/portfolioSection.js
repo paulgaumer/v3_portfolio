@@ -1,10 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Fade from "react-reveal/Fade"
 import SectionContainer from "../layout/sectionContainer"
 import PortfolioCard from "../portfolio/portfolioCard"
-import Fade from "react-reveal/Fade"
+import TechTag from "./techTag"
 
 const PortfolioSection = ({ projects }) => {
+  const technologies = [
+    "React.js",
+    "Gatsby.js",
+    "Next.js",
+    "Sanity CMS",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Cypress",
+    "Jest",
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+  ]
+
   return (
     <SectionContainer maxWidth="max-w-xl lg:max-w-5xl">
       <div className="mt-20 md:mt-32 lg:mt-40" id="portfolio">
@@ -14,20 +30,33 @@ const PortfolioSection = ({ projects }) => {
         >
           Portfolio
         </h2>
-        <div className="mt-16 space-y-32">
-          {projects.map((project, index) => (
-            <Fade bottom key={project.id}>
-              <PortfolioCard
-                index={index}
-                title={project.title}
-                description={project.description}
-                blockDescription={project._rawBlockDescription}
-                url={project.url}
-                frontImage={project.frontImage}
-                backImage={project.backImage}
-              />
-            </Fade>
-          ))}
+        <div className="mt-10 lg:mt-16">
+          <div className="max-w-xl mx-auto mb-16 lg:mb-28 lg:max-w-3xl">
+            <h3 className="mb-2 text-xl text-center text-gray-400 md:text-2xl font-header">
+              THINGS I ENJOY WORKING WITH
+            </h3>
+            <ul className="flex flex-wrap justify-center">
+              {/* <ul className="grid grid-flow-col-dense"> */}
+              {technologies.map(tech => {
+                return <TechTag content={tech} key={tech} />
+              })}
+            </ul>
+          </div>
+          <div className="space-y-32">
+            {projects.map((project, index) => (
+              <Fade bottom key={project.id}>
+                <PortfolioCard
+                  index={index}
+                  title={project.title}
+                  description={project.description}
+                  blockDescription={project._rawBlockDescription}
+                  url={project.url}
+                  frontImage={project.frontImage}
+                  backImage={project.backImage}
+                />
+              </Fade>
+            ))}
+          </div>
         </div>
       </div>
     </SectionContainer>
