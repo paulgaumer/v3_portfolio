@@ -19,7 +19,7 @@ const PortfolioSection = ({ projects }) => {
     "TypeScript",
     "HTML",
     "CSS",
-    "A11Y",
+    "a11y",
     "Ruby On Rails",
   ]
 
