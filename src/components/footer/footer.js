@@ -7,7 +7,10 @@ import linkedin from "../../images/linkedin.svg"
 
 const Footer = () => {
   return (
-    <div data-name="footer-wrapper" className="flex-shrink-0 bg-gray-800 mt-52">
+    <div
+      data-name="footer-wrapper"
+      className="flex-shrink-0 mt-20 bg-gray-800 lg:mt-52"
+    >
       <footer className="px-10 pt-16 pb-5 mx-auto text-white max-w-7xl">
         <div className="mb-10 text-center md:mb-16">
           <h4 className="antialiased font-header text-yellowPrimary">
@@ -31,7 +34,7 @@ const Footer = () => {
             Let's work together!
           </motion.h3>
         </div>
-        <div className="flex flex-col items-center mb-20 space-y-8 md:items-start md:space-y-0 md:space-x-16 md:flex-row">
+        <div className="flex flex-col-reverse items-center mb-20 space-y-8 space-y-reverse md:items-start md:space-y-0 md:space-x-16 md:flex-row">
           <div className="text-lg md:w-1/2">
             <Fade left>
               <p className="mb-6" data-testid="footer-description">

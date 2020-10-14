@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import NavLink from "./navLink"
 import Logo from "../global/logo"
 import AnimatedColorWheel from "../global/animatedColorWheel"
 
 const Header = () => {
-  const [pathname, setPathname] = useState("/")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleClick = e => {
     e.preventDefault()
     setIsMenuOpen(!isMenuOpen)
   }
-
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      setPathname(window.location.pathname)
-    }
-  }, [])
 
   return (
     <header className="pt-4 mb-6 md:pt-6 xl:pt-8">
@@ -105,14 +98,12 @@ const Header = () => {
           >
             Blog
           </Link>
-          <Link
-            to={`${pathname}${
-              pathname === "/" ? "#contact-form" : "/#contact-form"
-            }`}
+          <a
+            href="#contact-form"
             className="block py-2 pl-3 pr-4 mt-1 text-base font-medium text-gray-600 transition duration-150 ease-in-out border-l-4 border-transparent hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 "
           >
             Contact
-          </Link>
+          </a>
         </div>
       </div>
       {/* MOBILE MENU BODY OFF */}

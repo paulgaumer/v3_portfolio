@@ -1,13 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { motion } from "framer-motion"
 import SectionContainer from "../layout/sectionContainer"
 import PageTitle from "../global/pageTitle"
 import HeroPortrait from "./heroPortrait"
-// import ColorWheel from "../global/colorWheel"
 import AnimatedColorWheel from "../global/animatedColorWheel"
 
 const HeroSection = () => {
-  // const [pulseOnce, setPulseOnce] = useState(false)
   return (
     <SectionContainer>
       {/* Slide from left on page load */}
