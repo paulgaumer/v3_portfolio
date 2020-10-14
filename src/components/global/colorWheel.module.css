@@ -1,15 +1,28 @@
 .wheel {
   position: relative !important;
-  width: 60px;
-  height: 60px;
-  /* border: 10px solid pink; */
+  width: 43px;
+  height: 42px;
+  /* border: 1px solid red; */
+}
+@screen md {
+  .wheel {
+    width: 50px;
+    height: 50px;
+  }
+}
+@screen lg {
+  .wheel {
+    width: 60px;
+    height: 60px;
+  }
 }
 .wheel:hover {
   cursor: pointer;
 }
 .colorLeaf {
-  width: 20px;
-  height: 20px;
+  /* width: 20px;
+  height: 20px; */
+  @apply w-3 h-3;
   border-radius: 0 100%;
   opacity: 0.8;
   position: absolute !important;
@@ -19,6 +32,16 @@
   -webkit-animation: intro 2s;
   animation: intro 2.5s;
   mix-blend-mode: hard-light;
+}
+@screen md {
+  .colorLeaf {
+    @apply w-4 h-4;
+  }
+}
+@screen lg {
+  .colorLeaf {
+    @apply w-5 h-5;
+  }
 }
 
 .colorLeaf:nth-child(1) {

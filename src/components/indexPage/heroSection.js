@@ -11,7 +11,7 @@ const HeroSection = () => {
     <SectionContainer>
       {/* Slide from left on page load */}
       <motion.div
-        className="flex items-center"
+        className="flex items-center sm:space-x-10 md:space-x-0"
         initial={{ opacity: 0, x: -50 }}
         animate={{
           opacity: 1,
@@ -23,7 +23,7 @@ const HeroSection = () => {
           <span>Hi, I'm Paul!</span>
         </PageTitle>
 
-        <div className="justify-center flex-grow hidden mt-8 md:flex md:mt-16 xl:mt-14">
+        <div className="flex-grow hidden mt-8 sm:justify-start md:justify-center sm:flex sm:mt-4 md:mt-8 lg:mt-10 xl:mt-14">
           {/* Fade in on page load */}
           <motion.div
             className=""
