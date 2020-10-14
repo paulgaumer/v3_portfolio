@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import tw from "twin.macro"
@@ -6,6 +6,7 @@ import { format } from "date-fns"
 import ArrowRight from "../icons/arrowRight"
 import Link from "../global/link"
 import { excerpt } from "../../utils/excerpt"
+import { GlobalStateContext } from "../../context/contextProvider"
 
 const Card = styled.div`
   h2 {
@@ -28,6 +29,11 @@ const PostCardIndex = ({ post }) => {
   const slug = post.slug.current
   const date = format(new Date(post.publishedAt), "MMMM d, yyyy")
   const description = excerpt(post.blockDescription[0]?.children[0]?.text)
+  const { themeColor, themes } = useContext(GlobalStateContext)
+
+  const getThemeBackground = () => {
+    return themes[themeColor].bg
+  }
 
   return (
     <Card data-testid="post-card" className="prose">
@@ -53,7 +59,7 @@ const PostCardIndex = ({ post }) => {
             {title}
           </h2>
           <div
-            className="absolute left-0 right-0 z-0 hidden h-2 bottom-3 group-hover:block bg-yellowSecondary"
+            className={`absolute left-0 right-0 z-0 hidden h-2 bottom-3 group-hover:block ${getThemeBackground()}`}
             style={{ position: "absolute !important" }}
           />
         </div>
