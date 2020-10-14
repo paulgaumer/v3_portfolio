@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import NavLink from "./navLink"
 import Logo from "../global/logo"
+import AnimatedColorWheel from "../global/animatedColorWheel"
 
 const Header = () => {
   const [pathname, setPathname] = useState("/")
@@ -38,6 +39,9 @@ const Header = () => {
             <NavLink href="#contact-form" linkText="contact" />
           </li>
         </ul>
+        <div className="pt-1 ml-2 sm:hidden">
+          <AnimatedColorWheel />
+        </div>
         {/* Mobile menu button Start */}
         <div className="flex items-center mr-2 sm:hidden">
           <button
@@ -83,12 +87,12 @@ const Header = () => {
       {/* MOBILE MENU BODY START */}
       <div className={`${isMenuOpen ? "block" : "hidden"} sm:hidden"`}>
         <div className="pt-2 pb-3 shadow">
-          <Link
-            to="/portfolio"
+          <a
+            href="#portfolio"
             className="block py-2 pl-3 pr-4 text-base font-medium text-gray-600 transition duration-150 ease-in-out border-l-4 border-transparent hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
           >
             Portfolio
-          </Link>
+          </a>
           <Link
             to="/about"
             className="block py-2 pl-3 pr-4 mt-1 text-base font-medium text-gray-600 transition duration-150 ease-in-out border-l-4 border-transparent hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
