@@ -65,11 +65,7 @@ export const query = graphql`
           slug {
             current
           }
-          blockDescription {
-            children {
-              text
-            }
-          }
+          summary
           publishedAt
         }
       }

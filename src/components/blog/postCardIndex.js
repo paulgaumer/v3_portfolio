@@ -28,7 +28,7 @@ const PostCardIndex = ({ post }) => {
   const title = post.title
   const slug = post.slug.current
   const date = format(new Date(post.publishedAt), "MMMM d, yyyy")
-  const description = excerpt(post.blockDescription[0]?.children[0]?.text)
+  const description = excerpt(post.summary)
   const { themeColor, themes } = useContext(GlobalStateContext)
 
   const getThemeBackground = () => {
