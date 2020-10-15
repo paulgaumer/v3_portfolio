@@ -12,7 +12,6 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
-            image
           }
         }
       }
@@ -48,7 +47,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.image,
+          content: "https://paulgaumer.com/defaultImage.png",
         },
         {
           name: `twitter:card`,
@@ -56,6 +55,10 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
+          name: `twitter:site`,
           content: site.siteMetadata?.author || ``,
         },
         {
@@ -68,12 +71,12 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: site.siteMetadata.image,
+          content: "https://paulgaumer.com/defaultImage.png",
         },
         {
           name: "keywords",
           content:
-            "Software Developer, Web Developer, Front End Developer, Front-End Developer, React, ReactJS, React.js, JavaScript, JAMStack, Gatsby, GatsbyJS, Gatsby.js, Next, NextJS, Next.js, Tailwind, Sanity, Netlify, CSS, HTML, Landing Page, Lighthouse, Coding, Programming, Teaching, Web Design",
+            "Software Developer, Web Developer, Front End Developer, Front-End Developer, React, React.js, JavaScript, JAMStack, Gatsby, Gatsby.js, Next, Next.js, Tailwind, Tailwind CSS, Sanity, Netlify, CSS, HTML, Landing Page, Lighthouse, Coding, Programming, Teaching, Web Design, Angers, Loire Atlantique, Japan, Tokyo",
         },
       ].concat(meta)}
     />
