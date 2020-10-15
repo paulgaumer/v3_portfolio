@@ -47,7 +47,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: "https://paulgaumer.com/defaultImage.png",
+          content: "https://paulgaumer.com/seoImage.png",
         },
         {
           name: `twitter:card`,
@@ -71,7 +71,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: "https://paulgaumer.com/defaultImage.png",
+          content: "https://paulgaumer.com/seoImage.png",
         },
         {
           name: "keywords",
