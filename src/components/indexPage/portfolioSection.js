@@ -34,7 +34,7 @@ const PortfolioSection = ({ projects }) => {
         </h2>
         <div className="mt-10 lg:mt-16">
           <div className="max-w-xl mx-auto mb-16 lg:mb-28 lg:max-w-3xl">
-            <h3 className="mb-2 text-xl text-center text-gray-400 md:text-2xl font-header">
+            <h3 className="mb-2 text-lg text-center text-gray-400 sm:text-xl md:text-2xl font-header">
               THINGS I ENJOY WORKING WITH
             </h3>
             <ul className="flex flex-wrap justify-center">
