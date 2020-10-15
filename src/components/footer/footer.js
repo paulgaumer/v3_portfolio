@@ -59,7 +59,7 @@ const Footer = () => {
                       <img
                         src={github}
                         alt="github icon"
-                        className="w-8 h-10"
+                        className="w-8 h-10 transform hover:scale-110"
                       />
                     </a>
                   </li>
@@ -73,7 +73,7 @@ const Footer = () => {
                       <img
                         src={linkedin}
                         alt="linkedin icon"
-                        className="w-8 h-10"
+                        className="w-8 h-10 transform hover:scale-110"
                       />
                     </a>
                   </li>
@@ -87,7 +87,7 @@ const Footer = () => {
                       <img
                         src={twitter}
                         alt="twitter icon"
-                        className="w-8 h-10"
+                        className="w-8 h-10 transform hover:scale-110"
                       />
                     </a>
                   </li>

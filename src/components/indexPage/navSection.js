@@ -74,7 +74,9 @@ const NavSection = () => {
             <NavItem href="/about" title="about">
               <p>
                 A brief overview of my past experiences and most recent
-                activities, including podcasting, workshop teaching and press.
+                activities, including{" "}
+                <Link href="https://japanlifestories.com/">podcasting</Link>,
+                workshop teaching and press.
               </p>
             </NavItem>
           </motion.li>

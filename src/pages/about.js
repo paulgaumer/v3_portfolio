@@ -12,6 +12,7 @@ import Pen from "../components/icons/pen"
 import Mic from "../components/icons/mic"
 import Academy from "../components/icons/academy"
 import Chat from "../components/icons/chat"
+import { Helmet } from "react-helmet"
 
 const About = () => {
   return (
@@ -32,9 +33,8 @@ const About = () => {
 
             <p>
               After spending 10 years in Japan, my family and I came back to
-              France during Summer 2019 to help my son discover another side of
-              his biculturality. I am now developing web services for a wide
-              range of businesses and supporting startups in their growth.
+              France during summer 2019 to help my son discover another side of
+              his biculturality.
             </p>
 
             <p>
@@ -62,16 +62,16 @@ const About = () => {
             <p>
               I spent the past 10 years living in Japan where I've been blessed
               to experience many roles, starting with a first career in sales
-              and marketing. To help foreign companies succeed in Japan was my
-              mission through talent acquisition, product development tailored
-              to the japanese market and the launch of IoT products (
+              and marketing. My mission was to help foreign companies succeed in
+              Japan through talent acquisition, product development focused on
+              the Japanese market and the launch of IoT products (
               <Link href="http://ja.babolatplay.com/">Babolat Play</Link>
               ).
             </p>
             <p>
-              Discovering a passion for code and design, I jumped into the
-              recent awakening of the Tokyo startup scene by creating Japan’s
-              very first coding bootcamp:{" "}
+              Discovering a passion for code and design, I jumped in 2016 into
+              the recent awakening of the Tokyo startup scene by creating
+              Japan’s very first English coding bootcamp:{" "}
               <Link href="https://www.lewagon.com/tokyo">Le Wagon</Link>
             </p>
             <p>Our missions were to:</p>
@@ -84,7 +84,7 @@ const About = () => {
                     </span>
                   </span>
                   <span>
-                    Bring technical skills to creatives and entrepreneurs
+                    Teach technical skills to creatives and entrepreneurs
                   </span>
                 </li>
                 <li className="flex items-start space-x-2">
@@ -94,7 +94,7 @@ const About = () => {
                     </span>
                   </span>
                   <span>
-                    Provide a pool a talents to the growing startup community
+                    Provide a pool of talents to the growing startup community
                   </span>
                 </li>
                 <li className="flex items-start space-x-2">
@@ -125,7 +125,7 @@ const About = () => {
             <p>
               After 3 years of activity and opening two locations (Tokyo &
               Kyoto), Le Wagon Japan trained over 150 students from 30+
-              nationalities, now woking as founders, developers, UX designers,
+              nationalities, now working as founders, developers, UX designers,
               product managers or digital marketers.
             </p>
 
@@ -137,8 +137,8 @@ const About = () => {
                     <Pen customClasses="mt-2" />
                   </span>
                   <span>
-                    Previous students now work at Facebook, Apple, Amazon as
-                    well as boutique agencies and blue chips.
+                    Alumni now work at Facebook, Apple, Amazon as well as
+                    boutique agencies and blue chips.
                   </span>
                 </li>
                 <li className="flex items-start space-x-2">
@@ -166,8 +166,16 @@ const About = () => {
               Talks
             </h2>
             <p>
-              I have been fortunate to run numerous workshops and to be invited
-              to events and panels as a speaker, including:
+              Founded{" "}
+              <Link href="https://www.meetup.com/Le-Wagon-Tokyo-Coding-Station/">
+                Le Wagon Tokyo
+              </Link>{" "}
+              and{" "}
+              <Link href="https://www.meetup.com/fr-FR/Code-In-Angers/">
+                Code In Angers
+              </Link>{" "}
+              Meetup groups. I regularly run workshops and events as well as
+              join panels as a speaker, including:
             </p>
             <div className="">
               <div>
@@ -218,6 +226,12 @@ const About = () => {
                     <span>
                       <Academy />
                     </span>
+                    <span>JAMStack and Gatsby.js</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <span>
+                      <Academy />
+                    </span>
                     <span>
                       Ideathon: Come with an idea, leave with a prototype
                     </span>
@@ -261,6 +275,37 @@ const About = () => {
                 </ul>
               </div>
             </div>
+          </AboutSection>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0, transition: { delay: 0.5 } }}
+        >
+          <AboutSection customClasses="prose md:prose-lg">
+            <h2 data-testid="about-section-title" className="">
+              Podcasting
+            </h2>
+            <p>
+              I launched the{" "}
+              <Link href="https://japanlifestories.com/">
+                Japan Life Stories
+              </Link>{" "}
+              podcast in 2019 to share stories of foreigners who built a life
+              and career in Japan. The initial motivation was to share the
+              insights I would have liked to know during my first year in the
+              country: how to find a job, grow your career, build a network,
+              start a business... It turned out to also be a fantatsic way to
+              stay connected to the local ecosystem and exchange with amazing
+              people.
+            </p>
+            <div id="buzzsprout-player-3536647"></div>
+            <Helmet>
+              <script
+                src="https://www.buzzsprout.com/740042/3536647-09-connecting-cultures-through-business-innovation-with-fariza-abidova.js?container_id=buzzsprout-player-3536647&player=small"
+                type="text/javascript"
+                charset="utf-8"
+              ></script>
+            </Helmet>
           </AboutSection>
         </motion.div>
         <motion.div

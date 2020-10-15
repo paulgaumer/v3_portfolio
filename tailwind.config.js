@@ -47,6 +47,9 @@ module.exports = {
       },
     }),
   },
-  variants: { display: ["group-hover", "responsive"] },
+  variants: {
+    display: ["group-hover", "responsive"],
+    scale: ["hover"],
+  },
   plugins: [require("@tailwindcss/ui"), require("@tailwindcss/typography")],
 }
