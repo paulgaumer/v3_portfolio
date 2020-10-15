@@ -1,14 +1,24 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/contextProvider"
 
-const Portrait = ({ source }) => {
+const Portrait = ({ sourceDefault, sourceWebp }) => {
   return (
-    <img
-      src={source}
-      alt="Paul Gaumer"
-      data-testid="hero-image"
-      className="object-cover object-top w-full h-full rounded-lg"
-    />
+    // <img
+    //   src={source}
+    //   alt="Paul Gaumer"
+    //   data-testid="hero-image"
+    //   className="object-cover object-top w-full h-full rounded-lg"
+    // />
+    <picture>
+      <source srcset={sourceWebp} type="image/webp" />
+      <source srcset={sourceDefault} type="image/jpeg" />
+      <img
+        src={sourceDefault}
+        alt="Paul Gaumer"
+        data-testid="hero-image"
+        className="object-cover object-top w-full h-full rounded-lg"
+      />
+    </picture>
   )
 }
 
@@ -18,23 +28,38 @@ const HeroPortrait = () => {
   switch (themeColor) {
     case "yellow":
       return (
-        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg" />
+        <Portrait
+          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg"
+          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.webp"
+        />
       )
     case "red":
       return (
-        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.jpg" />
+        <Portrait
+          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.jpg"
+          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.webp"
+        />
       )
     case "blue":
       return (
-        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.jpg" />
+        <Portrait
+          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.jpg"
+          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.webp"
+        />
       )
     case "green":
       return (
-        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.jpg" />
+        <Portrait
+          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.jpg"
+          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.webp"
+        />
       )
     default:
       return (
-        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg" />
+        <Portrait
+          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg"
+          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.webp"
+        />
       )
   }
 }

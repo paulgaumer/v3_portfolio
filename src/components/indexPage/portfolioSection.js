@@ -34,7 +34,7 @@ const PortfolioSection = ({ projects }) => {
         </h2>
         <div className="mt-10 lg:mt-16">
           <div className="max-w-xl mx-auto mb-16 lg:mb-28 lg:max-w-3xl">
-            <h3 className="mb-2 text-lg text-center text-gray-400 sm:text-xl md:text-2xl font-header">
+            <h3 className="mb-2 text-lg text-center text-gray-500 sm:text-xl md:text-2xl font-header">
               THINGS I ENJOY WORKING WITH
             </h3>
             <ul className="flex flex-wrap justify-center">
@@ -44,7 +44,7 @@ const PortfolioSection = ({ projects }) => {
               })}
             </ul>
           </div>
-          <div className="space-y-32">
+          <div className="space-y-24 lg:space-y-32">
             {projects.map((project, index) => (
               <Fade bottom key={project.id}>
                 <PortfolioCard

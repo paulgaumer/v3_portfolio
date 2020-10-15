@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className="pt-4 mb-6 md:pt-6 xl:pt-8">
       <nav className="flex items-center justify-between pb-3 xl:pb-3 sm:border-b sm:border-gray-200">
-        <Link to="/">
+        <Link to="/" aria-label="homepage">
           <Logo width="w-10" height="h-10" />
         </Link>
         <ul className="items-center hidden space-x-10 sm:flex">

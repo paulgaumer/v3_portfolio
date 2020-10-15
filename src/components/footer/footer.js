@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div
       data-name="footer-wrapper"
-      className="flex-shrink-0 mt-20 bg-gray-800 lg:mt-52"
+      className="flex-shrink-0 mt-20 bg-gray-800 lg:mt-40"
     >
       <footer className="px-10 pt-16 pb-5 mx-auto text-white max-w-7xl">
         <div className="mb-10 text-center md:mb-16">
