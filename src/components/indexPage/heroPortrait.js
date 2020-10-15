@@ -1,9 +1,5 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/contextProvider"
-import yellow from "../../images/paul-yellow.jpg"
-import red from "../../images/paul-red.jpg"
-import blue from "../../images/paul-blue.jpg"
-import green from "../../images/paul-green.jpg"
 
 const Portrait = ({ source }) => {
   return (
@@ -21,15 +17,25 @@ const HeroPortrait = () => {
 
   switch (themeColor) {
     case "yellow":
-      return <Portrait source={yellow} />
+      return (
+        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg" />
+      )
     case "red":
-      return <Portrait source={red} />
+      return (
+        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.jpg" />
+      )
     case "blue":
-      return <Portrait source={blue} />
+      return (
+        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.jpg" />
+      )
     case "green":
-      return <Portrait source={green} />
+      return (
+        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.jpg" />
+      )
     default:
-      return <Portrait source={yellow} />
+      return (
+        <Portrait source="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg" />
+      )
   }
 }
 
