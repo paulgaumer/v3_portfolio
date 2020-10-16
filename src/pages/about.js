@@ -292,9 +292,9 @@ const About = () => {
               </Link>{" "}
               podcast in 2019 to share stories of foreigners who built a life
               and career in Japan. The initial motivation was to share the
-              insights I would have liked to know during my first year in the
+              insights I would have liked to get during my first year in the
               country: how to find a job, grow your career, build a network,
-              start a business... It turned out to also be a fantatsic way to
+              start a business... It turned out to also be a fantastic way to
               stay connected to the local ecosystem and exchange with amazing
               people.
             </p>
