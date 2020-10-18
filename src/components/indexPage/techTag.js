@@ -15,7 +15,7 @@ const TechTag = ({ content }) => {
   return (
     <li>
       <span
-        className={`inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 mt-4 mx-2 ${getThemeBackground()} ${getThemeText()}`}
+        className={`inline-flex items-center px-3 py-0.5 lg:py-1 lg:px-4 rounded-full text-sm lg:text-base leading-5 mt-4 mx-2 ${getThemeBackground()} ${getThemeText()}`}
       >
         {content}
       </span>

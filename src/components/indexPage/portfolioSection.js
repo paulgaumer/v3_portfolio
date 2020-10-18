@@ -12,6 +12,7 @@ const PortfolioSection = ({ projects }) => {
     "Next.js",
     "Sanity CMS",
     "Tailwind CSS",
+    "Styled Components",
     "Framer Motion",
     "Cypress",
     "Jest",
@@ -21,6 +22,7 @@ const PortfolioSection = ({ projects }) => {
     "CSS",
     "a11y",
     "Ruby On Rails",
+    "People ❤️",
   ]
 
   return (
@@ -35,7 +37,7 @@ const PortfolioSection = ({ projects }) => {
         <div className="mt-10 lg:mt-16">
           <div className="max-w-xl mx-auto mb-16 lg:mb-28 lg:max-w-3xl">
             <h3 className="mb-2 text-lg text-center text-gray-500 sm:text-xl md:text-2xl font-header">
-              THINGS I ENJOY WORKING WITH
+              I ENJOY WORKING WITH
             </h3>
             <ul className="flex flex-wrap justify-center">
               {/* <ul className="grid grid-flow-col-dense"> */}

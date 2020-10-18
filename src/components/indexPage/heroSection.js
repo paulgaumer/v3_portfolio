@@ -37,7 +37,7 @@ const HeroSection = () => {
           <span className="hidden sm:inline-block">
             My name is Paul Gaumer.
           </span>{" "}
-          I am a software developer focusing on creating smooth and accessible
+          I am a software developer focusing on crafting smooth and accessible
           web experiences.
         </p>
       </motion.div>

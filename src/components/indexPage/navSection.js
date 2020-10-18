@@ -58,7 +58,7 @@ const NavSection = () => {
           >
             <NavItem href="#portfolio" title="portfolio" gatsbyLink={false}>
               <p>
-                A few of the projects I've worked and collaborated on. I
+                A few of the projects I've developed and collaborated on. I
                 currently work as a freelance developer specialized in React,
                 JavaScript and all things{" "}
                 <Link href="https://jamstack.org/">JAMStack</Link>.
@@ -88,8 +88,8 @@ const NavSection = () => {
           >
             <NavItem href="/blog" title="blog">
               <p>
-                Discoveries, learnings and programming nuggets I'd like to keep
-                in mind while sharing with the community.
+                Discoveries, learnings and programming nuggets I stumbled upon.
+                Opinions and bugs are my own ^^
               </p>
             </NavItem>
           </motion.li>

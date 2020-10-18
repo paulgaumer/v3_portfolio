@@ -27,8 +27,12 @@ const About = () => {
         >
           <SectionIntro>
             <p>
-              My name is Paul Gaumer and I am a French developer and startup
-              consultant currently living in Angers (France).
+              My name is Paul Gaumer and I am a French developer currently
+              living in{" "}
+              <Link href="https://www.tourisme.destination-angers.com/en">
+                Angers
+              </Link>{" "}
+              (France).
             </p>
 
             <p>
@@ -60,19 +64,29 @@ const About = () => {
               Startups in Japan
             </h2>
             <p>
-              I spent the past 10 years living in Japan where I've been blessed
-              to experience many roles, starting with a first career in sales
-              and marketing. My mission was to help foreign companies succeed in
+              I moved to Japan in 2010 where I started my career in sales and
+              marketing. My mission was to help foreign companies succeed in
               Japan through talent acquisition, product development focused on
               the Japanese market and the launch of IoT products (
               <Link href="http://ja.babolatplay.com/">Babolat Play</Link>
               ).
             </p>
+            <h3>Learning how to code</h3>
             <p>
-              Discovering a passion for code and design, I jumped in 2016 into
-              the recent awakening of the Tokyo startup scene by creating
-              Japan’s very first English coding bootcamp:{" "}
-              <Link href="https://www.lewagon.com/tokyo">Le Wagon</Link>
+              After failing the launch of my first startup and interacting with
+              an increasing number of developers, I decided to learn how to code
+              by attending Le Wagon Coding Bootcamp in 2016 ( ->{" "}
+              <Link href="https://medium.com/@Paul_Gaumer/how-i-challenged-myself-by-learning-how-to-code-2497e8096aac#.dqvy49888">
+                full story here
+              </Link>
+              ).
+            </p>
+            <p>
+              As no similar learning experience existed in Japan at the time, I
+              jumped in 2016 into the recent awakening of the Tokyo startup
+              scene by co-founding and leading Japan’s very first English coding
+              bootcamp:{" "}
+              <Link href="https://www.lewagon.com/tokyo">Le Wagon Japan</Link>
             </p>
             <p>Our missions were to:</p>
             <div>
@@ -83,9 +97,7 @@ const About = () => {
                       <ArrowRight customClasses="mt-2" />
                     </span>
                   </span>
-                  <span>
-                    Teach technical skills to creatives and entrepreneurs
-                  </span>
+                  <span>Teach programming to creatives and entrepreneurs</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span>
@@ -124,12 +136,12 @@ const About = () => {
 
             <p>
               After 3 years of activity and opening two locations (Tokyo &
-              Kyoto), Le Wagon Japan trained over 150 students from 30+
-              nationalities, now working as founders, developers, UX designers,
-              product managers or digital marketers.
+              Kyoto), Le Wagon Japan had trained over 150 students from 30+
+              nationalities, now working as software developers, UX designers,
+              product managers or startup founders.
             </p>
 
-            <h3>Fun facts</h3>
+            <h3>Lessons</h3>
             <div>
               <ul className="">
                 <li className="flex items-start space-x-2">
@@ -137,21 +149,22 @@ const About = () => {
                     <Pen customClasses="mt-2" />
                   </span>
                   <span>
-                    Alumni now work at Facebook, Apple, Amazon as well as
-                    boutique agencies and blue chips.
+                    <i>"You know nothing, Jon Snow"</i>. I have been fortunate
+                    to meet amazing mentors and always seek an opportunity to
+                    dive into a new topic. There is no end to the learning
+                    process.
                   </span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span>
                     <Pen customClasses="mt-2" />
                   </span>
-                  <div>
-                    Some of them founded companies, raising significant amounts
-                    of capital (
-                    <Link href="https://www.preface.ai/">Preface</Link>) or
-                    disrupting various markets (
-                    <Link href="https://www.aoiship.com/">AoiShip</Link>)
-                  </div>
+
+                  <span>
+                    Programming requires a heavy dose of human skills, even more
+                    in a remote context. Communication, open mindedness and
+                    empathy go a long way in seeing a team succeed.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -174,8 +187,8 @@ const About = () => {
               <Link href="https://www.meetup.com/fr-FR/Code-In-Angers/">
                 Code In Angers
               </Link>{" "}
-              Meetup groups. I regularly run workshops and events as well as
-              join panels as a speaker, including:
+              Meetup groups. I love sharing topics I'm passionate about and
+              regularly run workshops or join events. Past ones include:
             </p>
             <div className="">
               <div>
@@ -185,7 +198,9 @@ const About = () => {
                     <span>
                       <Mic />
                     </span>
-                    <span>Tokyo Fintech - Careers in Finch & Recruitment</span>
+                    <span>
+                      Tokyo Fintech - Careers in Fintech & Recruitment
+                    </span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <span>
@@ -294,9 +309,8 @@ const About = () => {
               and career in Japan. The initial motivation was to share the
               insights I would have liked to get during my first year in the
               country: how to find a job, grow your career, build a network,
-              start a business... It turned out to also be a fantastic way to
-              stay connected to the local ecosystem and exchange with amazing
-              people.
+              start a business... It turned out to be a fantastic way to stay
+              connected to the local ecosystem and exchange with amazing people.
             </p>
             <div id="buzzsprout-player-3536647"></div>
             <Helmet>
