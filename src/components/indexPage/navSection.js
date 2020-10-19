@@ -89,7 +89,7 @@ const NavSection = () => {
             <NavItem href="/blog" title="blog">
               <p>
                 Discoveries, learnings and programming nuggets I stumbled upon.
-                Opinions and bugs are my own ^^
+                Opinions and bugs are my own.
               </p>
             </NavItem>
           </motion.li>
