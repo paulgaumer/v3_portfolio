@@ -1,8 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 
-const NavLink = ({ gatsbyLink, href, linkText }) => {
+interface NavLinkProps {
+  gatsbyLink?: boolean,
+  href: string,
+  linkText:string
+}
+
+const NavLink = ({ gatsbyLink=false, href, linkText }: NavLinkProps) => {
   const classes = `text-gray-600 border-b border-transparent lg:text-base xl:text-lg hover:text-gray-900 capitalize inline-block antialiased`
 
   if (!gatsbyLink) {
@@ -21,13 +26,3 @@ const NavLink = ({ gatsbyLink, href, linkText }) => {
 }
 
 export default NavLink
-
-NavLink.propTypes = {
-  gatsbyLink: PropTypes.bool,
-  href: PropTypes.string,
-  linkText: PropTypes.string,
-}
-
-NavLink.defaultProps = {
-  gatsbyLink: false,
-}

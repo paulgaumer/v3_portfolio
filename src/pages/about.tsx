@@ -14,7 +14,7 @@ import Academy from "../components/icons/academy"
 import Chat from "../components/icons/chat"
 import { Helmet } from "react-helmet"
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <Layout>
       <SEO title="About" />

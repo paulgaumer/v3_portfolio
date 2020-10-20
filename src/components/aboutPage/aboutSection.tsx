@@ -1,7 +1,11 @@
 import React from "react"
-import PropTypes from "prop-types"
 
-const AboutSection = ({ children, customClasses }) => {
+interface AboutSectionProps {
+  children: React.ReactNode,
+  customClasses?: string
+}
+
+const AboutSection = ({ children, customClasses }: AboutSectionProps) => {
   return (
     <section data-testid="about-section" className={`mt-20 ${customClasses}`}>
       {children}
@@ -10,8 +14,3 @@ const AboutSection = ({ children, customClasses }) => {
 }
 
 export default AboutSection
-
-AboutSection.propTypes = {
-  children: PropTypes.node,
-  customClasses: PropTypes.string,
-}

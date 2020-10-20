@@ -1,10 +1,13 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Header from "../header/header"
 import Footer from "../footer/footer"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen font-sans text-base antialiased text-gray-700">
       <div className="flex flex-col flex-grow w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -14,10 +17,6 @@ const Layout = ({ children }) => {
       <Footer />
     </div>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
