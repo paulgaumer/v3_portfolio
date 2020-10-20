@@ -32,6 +32,8 @@ const Container = styled.div`
 
 const NotFoundPage = () => {
   useEffect(() => {
+
+    // Activate the page's animations
     gsap.set("svg", { visibility: "visible" })
     gsap.to("#headStripe", {
       y: 0.5,
