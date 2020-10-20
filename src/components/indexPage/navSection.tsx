@@ -1,16 +1,25 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 import tw from "twin.macro"
 import { AnimatePresence, motion } from "framer-motion"
 import SectionContainer from "../layout/sectionContainer"
 import Link from "../global/link"
 
+// STYLE
 const Title = styled.h2`
   ${tw`mb-2! lg:mb-5! font-header!`}
 `
 
-const NavItem = ({ href, title, children, gatsbyLink = true }) => {
+// TYPES
+interface NavItemProps {
+  href: string,
+  title: string,
+  children: React.ReactElement,
+  gatsbyLink?: boolean
+}
+
+
+const NavItem = ({ href, title, children, gatsbyLink = true }: NavItemProps) => {
   return (
     <div className="prose">
       <Title className="flex items-center space-x-2 capitalize">
@@ -44,7 +53,7 @@ const NavItem = ({ href, title, children, gatsbyLink = true }) => {
   )
 }
 
-const NavSection = () => {
+const NavSection: React.FC = () => {
   return (
     <SectionContainer>
       <ul
@@ -100,10 +109,3 @@ const NavSection = () => {
 }
 
 export default NavSection
-
-NavItem.propTypes = {
-  href: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node,
-  gatsbyLink: PropTypes.bool,
-}
