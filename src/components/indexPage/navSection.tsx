@@ -14,7 +14,7 @@ const Title = styled.h2`
 interface NavItemProps {
   href: string,
   title: string,
-  children: React.ReactElement,
+  children: React.ReactNode,
   gatsbyLink?: boolean
 }
 

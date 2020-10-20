@@ -1,12 +1,29 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Fade from "react-reveal/Fade"
 import SectionContainer from "../layout/sectionContainer"
 import PortfolioCard from "../portfolio/portfolioCard"
 import TechTag from "./techTag"
 
-const PortfolioSection = ({ projects }) => {
-  const technologies = [
+interface PortfolioSectionProps {
+  projects: {
+    id: string,
+    title: string,
+    url: string,
+    _rawBlockDescription: object[],
+    frontImage: {
+      asset: {
+        fluid: object
+      }
+      hotspot: {
+        x:number,
+        y:number
+      }
+    }
+  }[]
+}
+
+const PortfolioSection = ({ projects }: PortfolioSectionProps) => {
+  const technologies: string[] = [
     "React.js",
     "Gatsby.js",
     "Next.js",
@@ -40,7 +57,6 @@ const PortfolioSection = ({ projects }) => {
               I ENJOY WORKING WITH
             </h3>
             <ul className="flex flex-wrap justify-center">
-              {/* <ul className="grid grid-flow-col-dense"> */}
               {technologies.map(tech => {
                 return <TechTag content={tech} key={tech} />
               })}
@@ -52,11 +68,9 @@ const PortfolioSection = ({ projects }) => {
                 <PortfolioCard
                   index={index}
                   title={project.title}
-                  description={project.description}
                   blockDescription={project._rawBlockDescription}
                   url={project.url}
                   frontImage={project.frontImage}
-                  backImage={project.backImage}
                 />
               </Fade>
             ))}
@@ -68,7 +82,3 @@ const PortfolioSection = ({ projects }) => {
 }
 
 export default PortfolioSection
-
-PortfolioSection.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.object),
-}

@@ -8,26 +8,25 @@ import PortfolioSection from "../components/indexPage/portfolioSection"
 
 interface DataProps extends PageProps {
   data: {
-    allSanityProject: any
-    // allSanityProject: {
-    //   edges: [
-    //     node: {
-    //       id: string,
-    //       title: string,
-    //       url: string,
-    //       _rawBlockDescription: object[],
-    //       frontImage: {
-    //         asset: {
-    //           fluid: object
-    //         }
-    //         hotspot: {
-    //           x:number,
-    //           y:number
-    //         }
-    //       }
-    //     }
-    //   ]
-    // }
+    allSanityProject: {
+      edges: {
+        node: {
+          id: string,
+          title: string,
+          url: string,
+          _rawBlockDescription: object[],
+          frontImage: {
+            asset: {
+              fluid: object
+            }
+            hotspot: {
+              x:number,
+              y:number
+            }
+          }
+        }
+      }[]
+    }
   }
 }
 

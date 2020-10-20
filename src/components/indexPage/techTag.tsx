@@ -1,12 +1,11 @@
-import { PageProps } from "gatsby"
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/contextProvider"
 
-interface TechTagProps extends PageProps {
+interface TechTagProps {
   content: string
 }
 
-const TechTag: React.FC = ({ content }: TechTagProps) => {
+const TechTag = ({ content }: TechTagProps) => {
   const { themeColor, themes } = useContext(GlobalStateContext)
   
   const getThemeBackground = (): string => {

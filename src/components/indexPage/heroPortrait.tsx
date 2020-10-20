@@ -21,7 +21,7 @@ const Portrait = ({ sourceDefault, sourceWebp }: PortraitProps) => {
   )
 }
 
-const HeroPortrait: React.FC = () => {
+const HeroPortrait = () => {
   const { themeColor } = useContext(GlobalStateContext)
 
   switch (themeColor) {

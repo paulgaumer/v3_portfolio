@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import ImageHot from "../global/imageHot"
 import numberIsEven from "../../utils/numberIsEven"
 import Github from "../icons/github"
@@ -7,7 +6,23 @@ import ExternalLink from "../icons/externalLink"
 import PortableText from "@sanity/block-content-to-react"
 import { serializers } from "../../utils/portableTextSerializer"
 
-const PortfolioCard = ({ index, title, url, frontImage, blockDescription }) => {
+interface PortfolioCardProps {
+  index: number,
+  title: string,
+  url: string,
+  blockDescription: object[],
+  frontImage: {
+    asset: {
+      fluid: object
+    }
+    hotspot: {
+      x:number,
+      y:number
+    }
+  }
+}
+
+const PortfolioCard = ({ index, title, url, frontImage, blockDescription }: PortfolioCardProps) => {
   return (
     <div
       data-testid="project-card"
@@ -60,11 +75,3 @@ const PortfolioCard = ({ index, title, url, frontImage, blockDescription }) => {
 }
 
 export default PortfolioCard
-
-PortfolioCard.propTypes = {
-  index: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  blockDescription: PropTypes.arrayOf(PropTypes.object).isRequired,
-  url: PropTypes.string.isRequired,
-  frontImage: PropTypes.object.isRequired,
-}
