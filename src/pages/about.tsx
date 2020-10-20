@@ -14,7 +14,7 @@ import Academy from "../components/icons/academy"
 import Chat from "../components/icons/chat"
 import { Helmet } from "react-helmet"
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <Layout>
       <SEO title="About" />
@@ -75,7 +75,7 @@ const About = () => {
             <p>
               After failing the launch of my first startup and interacting with
               an increasing number of developers, I decided to learn how to code
-              by attending Le Wagon Coding Bootcamp in 2016 ( ->{" "}
+              by attending Le Wagon Coding Bootcamp in 2016 ( {"->"}{" "}
               <Link href="https://medium.com/@Paul_Gaumer/how-i-challenged-myself-by-learning-how-to-code-2497e8096aac#.dqvy49888">
                 full story here
               </Link>
@@ -317,7 +317,7 @@ const About = () => {
               <script
                 src="https://www.buzzsprout.com/740042/3536647-09-connecting-cultures-through-business-innovation-with-fariza-abidova.js?container_id=buzzsprout-player-3536647&player=small"
                 type="text/javascript"
-                charset="utf-8"
+                charSet="utf-8"
               ></script>
             </Helmet>
           </AboutSection>
