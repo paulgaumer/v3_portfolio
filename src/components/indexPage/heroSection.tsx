@@ -5,7 +5,7 @@ import PageTitle from "../global/pageTitle"
 import HeroPortrait from "./heroPortrait"
 import AnimatedColorWheel from "../global/animatedColorWheel"
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   return (
     <SectionContainer>
       {/* Slide from left on page load */}

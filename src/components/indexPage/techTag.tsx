@@ -1,14 +1,18 @@
+import { PageProps } from "gatsby"
 import React, { useContext } from "react"
-import PropTypes from "prop-types"
 import { GlobalStateContext } from "../../context/contextProvider"
 
-const TechTag = ({ content }) => {
-  const { themeColor, themes } = useContext(GlobalStateContext)
+interface TechTagProps extends PageProps {
+  content: string
+}
 
-  const getThemeBackground = () => {
+const TechTag: React.FC = ({ content }: TechTagProps) => {
+  const { themeColor, themes } = useContext(GlobalStateContext)
+  
+  const getThemeBackground = (): string => {
     return themes[themeColor].tag.bg
   }
-  const getThemeText = () => {
+  const getThemeText = (): string => {
     return themes[themeColor].tag.text
   }
 
@@ -24,7 +28,3 @@ const TechTag = ({ content }) => {
 }
 
 export default TechTag
-
-TechTag.propTypes = {
-  content: PropTypes.string.isRequired,
-}

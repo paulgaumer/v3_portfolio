@@ -1,17 +1,16 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/contextProvider"
 
-const Portrait = ({ sourceDefault, sourceWebp }) => {
+interface PortraitProps {
+  sourceDefault: string,
+  sourceWebp: string
+}
+
+const Portrait = ({ sourceDefault, sourceWebp }: PortraitProps) => {
   return (
-    // <img
-    //   src={source}
-    //   alt="Paul Gaumer"
-    //   data-testid="hero-image"
-    //   className="object-cover object-top w-full h-full rounded-lg"
-    // />
     <picture>
-      <source srcset={sourceWebp} type="image/webp" />
-      <source srcset={sourceDefault} type="image/jpeg" />
+      <source srcSet={sourceWebp} type="image/webp" />
+      <source srcSet={sourceDefault} type="image/jpeg" />
       <img
         src={sourceDefault}
         alt="Paul Gaumer"
@@ -22,7 +21,7 @@ const Portrait = ({ sourceDefault, sourceWebp }) => {
   )
 }
 
-const HeroPortrait = () => {
+const HeroPortrait: React.FC = () => {
   const { themeColor } = useContext(GlobalStateContext)
 
   switch (themeColor) {
