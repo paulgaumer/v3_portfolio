@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe("Footer", () => {
   before(() => {
     cy.visit("/")

@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe("Blog Index Page", () => {
   before(() => {
     cy.visit("/blog")
