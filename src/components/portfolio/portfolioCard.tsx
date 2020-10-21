@@ -15,9 +15,9 @@ interface PortfolioCardProps {
     asset: {
       fluid: object
     }
-    hotspot: {
-      x:number,
-      y:number
+    hotspot?: {
+      x?:number,
+      y?:number
     }
   }
 }
