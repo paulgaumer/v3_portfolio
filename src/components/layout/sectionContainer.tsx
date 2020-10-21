@@ -2,7 +2,7 @@ import React from "react"
 
 interface SectionContainerProps {
   children: React.ReactNode,
-  maxWidth: string,
+  maxWidth?: string,
   customClasses?: string 
 }
 

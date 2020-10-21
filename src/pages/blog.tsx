@@ -1,6 +1,6 @@
 import React from "react"
+import {graphql} from "gatsby"
 import { motion } from "framer-motion"
-import PropTypes from "prop-types"
 import PageTitle from "../components/global/pageTitle"
 import SectionIntro from "../components/global/sectionIntro"
 import Layout from "../components/layout/layout"
@@ -8,7 +8,25 @@ import SectionContainer from "../components/layout/sectionContainer"
 import SEO from "../components/seo"
 import PostCard from "../components/blog/postCardIndex"
 
-const Blog = ({ data }) => {
+interface BlogProps {
+  data: {
+    allSanityBlogPost: {
+      edges: {
+        node: {
+          id: string
+          title: string
+          slug: {
+            current: string
+          }
+          summary: string
+          publishedAt: string
+        }
+      }[]
+    }
+  }
+}
+
+const Blog = ({ data }: BlogProps) => {
   const posts = data.allSanityBlogPost.edges.map(({ node }) => node)
 
   return (
@@ -71,7 +89,3 @@ export const query = graphql`
     }
   }
 `
-
-Blog.propTypes = {
-  data: PropTypes.object,
-}

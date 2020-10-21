@@ -1,9 +1,13 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { format } from "date-fns"
 import Calendar from "../icons/calendar"
 
-const PostTitle = ({ children, publishedAt }) => {
+interface PostTitleProps {
+  children: React.ReactNode,
+  publishedAt: string
+}
+
+const PostTitle = ({ children, publishedAt }: PostTitleProps) => {
   const date = format(new Date(publishedAt), "MMMM d, yyyy")
   return (
     <header className="mt-8 mb-6 md:mb-10 xl:mb-16 md:mt-16 xl:mt-24">
@@ -24,7 +28,3 @@ const PostTitle = ({ children, publishedAt }) => {
 }
 
 export default PostTitle
-
-PostTitle.propTypes = {
-  children: PropTypes.node,
-}
