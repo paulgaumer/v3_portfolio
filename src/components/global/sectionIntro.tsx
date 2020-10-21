@@ -1,7 +1,11 @@
 import React from "react"
-import PropTypes from "prop-types"
 
-const SectionIntro = ({ children, customClasses }) => {
+interface SectionIntroProps {
+  children: React.ReactNode,
+  customClasses?: string
+}
+
+const SectionIntro = ({ children, customClasses }: SectionIntroProps) => {
   const defaultClasses = "prose md:prose-xl"
   return (
     <div
@@ -14,8 +18,3 @@ const SectionIntro = ({ children, customClasses }) => {
 }
 
 export default SectionIntro
-
-SectionIntro.propTypes = {
-  children: PropTypes.node,
-  customClasses: PropTypes.string,
-}

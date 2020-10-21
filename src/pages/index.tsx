@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import HeroSection from "../components/indexPage/heroSection"
 import NavSection from "../components/indexPage/navSection"
 import PortfolioSection from "../components/indexPage/portfolioSection"
+import { FluidObject } from "gatsby-image"
 
 interface DataProps extends PageProps {
   data: {
@@ -17,7 +18,7 @@ interface DataProps extends PageProps {
           _rawBlockDescription: object[],
           frontImage: {
             asset: {
-              fluid: object
+              fluid: FluidObject
             }
             hotspot: {
               x:number,

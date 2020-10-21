@@ -1,12 +1,15 @@
 import React, { useContext } from "react"
-import PropTypes from "prop-types"
 import { AnimatePresence, motion } from "framer-motion"
 import { GlobalStateContext } from "../../context/contextProvider"
 
-const PageTitle = ({ children }) => {
+interface PageTitleProps {
+  children: React.ReactNode
+}
+
+const PageTitle = ({ children }: PageTitleProps) => {
   const { themeColor, themes } = useContext(GlobalStateContext)
 
-  const getThemeBackground = () => {
+  const getThemeBackground = (): string => {
     return themes[themeColor].bg
   }
 
@@ -34,7 +37,3 @@ const PageTitle = ({ children }) => {
 }
 
 export default PageTitle
-
-PageTitle.propTypes = {
-  children: PropTypes.node,
-}

@@ -1,8 +1,21 @@
 import React from "react"
-import PropTypes from "prop-types"
-import Img from "gatsby-image"
+import Img, { FluidObject } from "gatsby-image"
 
-const ImageHot = ({ image, alt, customClasses }) => {
+interface ImageHotProps {
+  image: {
+    asset: {
+      fluid: FluidObject
+    }
+    hotspot?: {
+      x?:number,
+      y?:number
+    }
+  },
+  alt: string,
+  customClasses?:string
+}
+
+const ImageHot = ({ image, alt, customClasses }: ImageHotProps) => {
   const hotspot =
     image.hotspot != null
       ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
@@ -21,9 +34,3 @@ const ImageHot = ({ image, alt, customClasses }) => {
 }
 
 export default ImageHot
-
-ImageHot.propTypes = {
-  image: PropTypes.object.isRequired,
-  alt: PropTypes.string,
-  customClasses: PropTypes.string,
-}

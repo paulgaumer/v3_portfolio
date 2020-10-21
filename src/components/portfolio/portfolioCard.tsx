@@ -5,6 +5,7 @@ import Github from "../icons/github"
 import ExternalLink from "../icons/externalLink"
 import PortableText from "@sanity/block-content-to-react"
 import { serializers } from "../../utils/portableTextSerializer"
+import { FluidObject } from "gatsby-image"
 
 interface PortfolioCardProps {
   index: number,
@@ -13,7 +14,7 @@ interface PortfolioCardProps {
   blockDescription: object[],
   frontImage: {
     asset: {
-      fluid: object
+      fluid: FluidObject
     }
     hotspot?: {
       x?:number,

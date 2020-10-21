@@ -1,7 +1,12 @@
 import React from "react"
-import PropTypes from "prop-types"
 
-const Logo = ({ width, height, customClasses }) => {
+interface LogoProps {
+  width?: string,
+  height?: string,
+  customClasses?: string
+}
+
+const Logo = ({ width = "w-6", height = "h-6", customClasses }: LogoProps) => {
   return (
     <svg
       viewBox="0 0 780 780"
@@ -24,14 +29,3 @@ const Logo = ({ width, height, customClasses }) => {
 }
 
 export default Logo
-
-Logo.propTypes = {
-  width: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
-  customClasses: PropTypes.string,
-}
-
-Logo.defaultProps = {
-  width: "w-6",
-  height: "h-6",
-}

@@ -1,3 +1,4 @@
+import { FluidObject } from "gatsby-image"
 import React from "react"
 import Fade from "react-reveal/Fade"
 import SectionContainer from "../layout/sectionContainer"
@@ -12,7 +13,7 @@ interface PortfolioSectionProps {
     _rawBlockDescription: object[],
     frontImage: {
       asset: {
-        fluid: object
+        fluid: FluidObject
       }
       hotspot: {
         x:number,

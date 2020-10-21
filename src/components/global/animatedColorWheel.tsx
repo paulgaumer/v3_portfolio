@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
-import ColorWheel from "../global/colorWheel"
+import ColorWheel from "./colorWheel"
 
 const AnimatedColorWheel = () => {
   const [pulseOnce, setPulseOnce] = useState(false)

@@ -1,16 +1,25 @@
 import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+
+interface CustomLinkProps {
+  gatsbyLink?: boolean,
+  href: string,
+  colors?: string,
+  underline?: string,
+  target?: boolean,
+  customClasses?: string,
+  children: React.ReactNode,
+}
 
 const CustomLink = ({
   children,
-  gatsbyLink,
+  gatsbyLink=false,
   href,
-  target,
+  target=true,
   colors,
   underline,
-  customClasses,
-}) => {
+  customClasses="",
+}: CustomLinkProps) => {
   const defaultColors = `text-blue-600 hover:text-blue-700`
   const defaultUnderline = `no-underline hover:underline`
 
@@ -42,19 +51,3 @@ const CustomLink = ({
 }
 
 export default CustomLink
-
-CustomLink.propTypes = {
-  gatsbyLink: PropTypes.bool,
-  href: PropTypes.string,
-  colors: PropTypes.string,
-  underline: PropTypes.string,
-  target: PropTypes.bool,
-  customClasses: PropTypes.string,
-  children: PropTypes.node,
-}
-
-CustomLink.defaultProps = {
-  gatsbyLink: false,
-  target: true,
-  customClasses: "",
-}
