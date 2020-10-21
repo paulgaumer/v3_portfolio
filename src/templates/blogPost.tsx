@@ -7,7 +7,17 @@ import SEO from "../components/seo"
 import PostTitle from "../components/blog/postTitle"
 import { serializers } from "../utils/blogPostsSerializer"
 
-const BlogPost = ({ data }) => {
+interface BlogPostProps {
+  data: {
+    sanityBlogPost: {
+      title: string
+      _rawBlockDescription: object[],
+      publishedAt: string
+    }
+  }
+}
+
+const BlogPost = ({ data }: BlogPostProps) => {
   const { title, _rawBlockDescription, publishedAt } = data.sanityBlogPost
   return (
     <Layout>

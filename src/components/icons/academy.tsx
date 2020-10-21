@@ -1,7 +1,13 @@
 import React from "react"
-import PropTypes from "prop-types"
 
-const Academy = ({ width, height, color, customClasses }) => {
+interface Props {
+  width?: string,
+  height?: string,
+  color?: string,
+  customClasses?: string
+}
+
+const Academy = ({ width, height, color, customClasses }: Props) => {
   const defaultWidth = `w-4`
   const defaultHeight = `h-4`
   const defaultColor = `text-gray-700`
@@ -22,10 +28,3 @@ const Academy = ({ width, height, color, customClasses }) => {
 }
 
 export default Academy
-
-Academy.propTypes = {
-  width: PropTypes.string,
-  height: PropTypes.string,
-  color: PropTypes.string,
-  customClasses: PropTypes.string,
-}

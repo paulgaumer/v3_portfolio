@@ -1,7 +1,13 @@
 import React from "react"
-import PropTypes from "prop-types"
 
-const Github = ({ width, height, color, customClasses }) => {
+interface Props {
+  width?: string,
+  height?: string,
+  color?: string,
+  customClasses?: string
+}
+
+const Github = ({ width, height, color, customClasses }: Props) => {
   const defaultWidth = `w-4`
   const defaultHeight = `h-4`
   const defaultColor = `text-gray-700`
@@ -22,10 +28,3 @@ const Github = ({ width, height, color, customClasses }) => {
 }
 
 export default Github
-
-Github.propTypes = {
-  width: PropTypes.string,
-  height: PropTypes.string,
-  color: PropTypes.string,
-  customClasses: PropTypes.string,
-}

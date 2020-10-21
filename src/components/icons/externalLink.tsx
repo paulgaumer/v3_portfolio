@@ -1,15 +1,21 @@
 import React from "react"
-import PropTypes from "prop-types"
 
-const Calendar = ({ width, height, color, customClasses }) => {
+interface Props {
+  width?: string,
+  height?: string,
+  color?: string,
+  customClasses?: string
+}
+
+const ExternalLink = ({ width, height, color, customClasses }: Props) => {
   const defaultWidth = `w-4`
   const defaultHeight = `h-4`
   const defaultColor = `text-gray-700`
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
       fill="none"
+      viewBox="0 0 24 24"
       stroke="currentColor"
       className={`
           ${width ?? defaultWidth} 
@@ -21,17 +27,10 @@ const Calendar = ({ width, height, color, customClasses }) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
       />
     </svg>
   )
 }
 
-export default Calendar
-
-Calendar.propTypes = {
-  width: PropTypes.string,
-  height: PropTypes.string,
-  color: PropTypes.string,
-  customClasses: PropTypes.string,
-}
+export default ExternalLink

@@ -1,9 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism"
 
+// STYLES
 const Syntax = styled(SyntaxHighlighter)`
   code::before {
     content: none !important;
@@ -13,7 +13,15 @@ const Syntax = styled(SyntaxHighlighter)`
   }
 `
 
-const CodeHighlighter = ({ content }) => {
+// TYPES
+interface CodeHighlighterProps {
+  content: {
+    language: string,
+    code: any
+  }
+}
+
+const CodeHighlighter = ({ content }: CodeHighlighterProps) => {
   if (!content || !content.code) {
     return null
   }
@@ -32,7 +40,3 @@ const CodeHighlighter = ({ content }) => {
 }
 
 export default CodeHighlighter
-
-CodeHighlighter.propTypes = {
-  content: PropTypes.object,
-}

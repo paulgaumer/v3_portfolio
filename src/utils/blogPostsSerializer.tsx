@@ -27,6 +27,7 @@ import CodeHighlighter from "../components/global/codeHighlighter"
 
 /**
  * Used to transcribe and style Sanity's Portable Text format
+ * Custom for blog posts
  */
 export const serializers = {
   types: {
