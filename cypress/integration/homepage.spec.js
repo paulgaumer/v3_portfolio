@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe("Homepage", () => {
   before(() => {
     cy.visit("/")
