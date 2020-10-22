@@ -15,14 +15,15 @@ interface DataProps extends PageProps {
           id: string,
           title: string,
           url: string,
+          repoUrl: string
           _rawBlockDescription: object[],
           frontImage: {
             asset: {
               fluid: FluidObject
             }
-            hotspot: {
-              x:number,
-              y:number
+            hotspot?: {
+              x?: number,
+              y?: number
             }
           }
         }
@@ -31,7 +32,7 @@ interface DataProps extends PageProps {
   }
 }
 
-const IndexPage: React.FC = ({data}: DataProps) => {
+const IndexPage: React.FC = ({ data }: DataProps) => {
   const projects = data.allSanityProject.edges.map(({ node }) => node)
 
   return (
@@ -54,6 +55,7 @@ export const query = graphql`
           id
           title
           url
+          repoUrl
           _rawBlockDescription
           frontImage {
             asset {

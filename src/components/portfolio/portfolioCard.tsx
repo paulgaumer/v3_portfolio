@@ -11,25 +11,25 @@ interface PortfolioCardProps {
   index: number,
   title: string,
   url: string,
+  repoUrl: string
   blockDescription: object[],
   frontImage: {
     asset: {
       fluid: FluidObject
     }
     hotspot?: {
-      x?:number,
-      y?:number
+      x?: number,
+      y?: number
     }
   }
 }
 
-const PortfolioCard = ({ index, title, url, frontImage, blockDescription }: PortfolioCardProps) => {
+const PortfolioCard = ({ index, title, url, frontImage, blockDescription, repoUrl }: PortfolioCardProps) => {
   return (
     <div
       data-testid="project-card"
-      className={`flex flex-col lg:flex-row w-full lg:space-x-14 ${
-        numberIsEven(index + 1) ? "lg:flex-row-reverse lg:space-x-reverse" : ""
-      }`}
+      className={`flex flex-col lg:flex-row w-full lg:space-x-14 ${numberIsEven(index + 1) ? "lg:flex-row-reverse lg:space-x-reverse" : ""
+        }`}
     >
       <div data-name="image-side" className={`flex items-center lg:w-1/2`}>
         <ImageHot
@@ -59,7 +59,7 @@ const PortfolioCard = ({ index, title, url, frontImage, blockDescription }: Port
             <span>website</span>
           </a>
           <a
-            href={url}
+            href={repoUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-4 space-x-2 text-sm font-bold text-gray-700 uppercase border border-gray-700 rounded-lg hover:border-gray-900 hover:text-gray-900"

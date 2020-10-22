@@ -10,14 +10,15 @@ interface PortfolioSectionProps {
     id: string,
     title: string,
     url: string,
+    repoUrl: string
     _rawBlockDescription: object[],
     frontImage: {
       asset: {
         fluid: FluidObject
       }
-      hotspot: {
-        x:number,
-        y:number
+      hotspot?: {
+        x?: number,
+        y?: number
       }
     }
   }[]
@@ -71,6 +72,7 @@ const PortfolioSection = ({ projects }: PortfolioSectionProps) => {
                   title={project.title}
                   blockDescription={project._rawBlockDescription}
                   url={project.url}
+                  repoUrl={project.repoUrl}
                   frontImage={project.frontImage}
                 />
               </Fade>
