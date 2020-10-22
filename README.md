@@ -37,12 +37,13 @@ Personal website, portfolio and blog. Mostly a sandbox to explore new programmin
 ### Built With
 
 - [Gatsby.js](https://www.gatsbyjs.com/) - front-end
-- [Sanity](https://www.sanity.io/) - back-end
+- [Sanity](https://www.sanity.io/) - back-end ([Lien vers repo](https://github.com/paulgaumer/portfolio_sanity))
 - [Netlify](https://netlify.com) - hosting
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Styled Components](https://styled-components.com/)
 - [Framer Motion](https://www.framer.com/motion/)
+- [Cypress](https://www.cypress.io/) - testing
 
 <!-- GETTING STARTED -->
 
