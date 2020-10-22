@@ -71,7 +71,7 @@ const PostCardIndex = ({ post }: PostCardIndexProps) => {
             {title}
           </h2>
           <div
-            className={`absolute z-0 hidden left-0 top-0 bottom-2 w-5 lg:w-auto lg:top-auto lg:right-0 lg:h-2 lg:bottom-3 group-hover:block ${getThemeBackground()}`}
+            className={`absolute left-0 right-0 z-0 hidden h-2 bottom-3 lg:group-hover:block ${getThemeBackground()}`}
             style={{ position: "absolute !important" as "absolute" }}
           />
         </div>
