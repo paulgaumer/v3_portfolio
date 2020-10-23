@@ -312,14 +312,14 @@ const About = () => {
               start a business... It turned out to be a fantastic way to stay
               connected to the local ecosystem and exchange with amazing people.
             </p>
-            <div id="buzzsprout-player-3536647"></div>
-            <Helmet>
-              <script
-                src="https://www.buzzsprout.com/740042/3536647-09-connecting-cultures-through-business-innovation-with-fariza-abidova.js?container_id=buzzsprout-player-3536647&player=small"
-                type="text/javascript"
-                charSet="utf-8"
-              ></script>
-            </Helmet>
+            <iframe
+              src={`https://www.buzzsprout.com/740042/3536647-09-connecting-cultures-through-business-innovation-with-fariza-abidova?client_source=small_player&amp;iframe=true&amp;referrer=https%3A%2F%2Fwww.buzzsprout.com%2F726084.js%3Fplayer%3Dsmall`}
+              title="3536647-09-connecting-cultures-through-business-innovation-with-fariza-abidova"
+              width="100%"
+              height="200"
+              frameBorder="0"
+              scrolling="no"
+            ></iframe>
           </AboutSection>
         </motion.div>
         <motion.div
