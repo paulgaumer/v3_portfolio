@@ -114,6 +114,7 @@ const Footer = () => {
                     aria-label="Email"
                     type="email"
                     name="email"
+                    data-testid="footer-form-email"
                     placeholder="Enter your email"
                     className="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none focus:outline-none focus:placeholder-gray-400"
                   />
@@ -121,6 +122,7 @@ const Footer = () => {
                     required
                     aria-label="Message"
                     name="message"
+                    data-testid="footer-form-message"
                     placeholder="How can I help you?"
                     className="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none focus:outline-none focus:placeholder-gray-400"
                   />

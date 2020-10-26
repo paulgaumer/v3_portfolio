@@ -17,7 +17,7 @@ describe("Homepage", () => {
   it('Render an internal link navigating to "#portfolio"', () => {
     cy.get("[data-testid=nav-section] a")
       .contains(/portfolio/i)
-      .should("have.attr", "href", "/#portfolio")
+      .should("have.attr", "href", "#portfolio")
       .click()
     // .url()
     // .should("include", "#portfolio")

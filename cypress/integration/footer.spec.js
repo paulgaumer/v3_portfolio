@@ -27,10 +27,10 @@ describe("Footer", () => {
   it("Form can submit a message", () => {
     const email = "test@test.com"
     const desc = "This is a test message"
-    cy.get("[data-testid='footer-form'] input")
+    cy.get("[data-testid='footer-form-email']")
       .type(email)
       .should("have.value", email)
-    cy.get("[data-testid='footer-form'] textarea")
+    cy.get("[data-testid='footer-form-message']")
       .type(desc)
       .should("have.value", desc)
     // cy.get("[data-testid='footer-form'] button").click()

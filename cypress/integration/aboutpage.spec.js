@@ -10,10 +10,10 @@ describe("About Page", () => {
   })
 
   it("Render 4 section titles", () => {
-    cy.findAllByTestId("about-section-title").should("have.length", 3)
+    cy.findAllByTestId("about-section-title").should("have.length", 4)
   })
   it("Render 3 content sections", () => {
-    cy.findAllByTestId("about-section").should("have.length", 3)
+    cy.findAllByTestId("about-section").should("have.length", 4)
   })
 
   it("Every link should contain a non-empty href opening in a new tab", () => {
