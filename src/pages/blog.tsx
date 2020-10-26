@@ -37,7 +37,7 @@ const Blog = ({ data }: BlogProps) => {
         <SectionIntro>
           <p>
             A series of short posts explaining discoveries, learnings and
-            programming nuggets I stumbled upon. Opinions and bugs are my own ^^
+            programming nuggets I stumbled upon. Opinions and bugs are my own.
           </p>
         </SectionIntro>
         <ul className="flex flex-col mt-20 space-y-16">
