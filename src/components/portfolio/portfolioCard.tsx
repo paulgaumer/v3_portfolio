@@ -1,10 +1,11 @@
 import React from "react"
-import ImageHot from "../global/imageHot"
+import Img from "gatsby-image"
+// import ImageHot from "../global/imageHot"
 import numberIsEven from "../../utils/numberIsEven"
 import Github from "../icons/github"
 import ExternalLink from "../icons/externalLink"
-import PortableText from "@sanity/block-content-to-react"
-import { serializers } from "../../utils/portableTextSerializer"
+// import PortableText from "@sanity/block-content-to-react"
+// import { serializers } from "../../utils/portableTextSerializer"
 import { FluidObject } from "gatsby-image"
 
 interface PortfolioCardProps {
@@ -12,14 +13,10 @@ interface PortfolioCardProps {
   title: string,
   url: string,
   repoUrl: string
-  blockDescription: object[],
+  blockDescription: string,
   frontImage: {
-    asset: {
+    childImageSharp: {
       fluid: FluidObject
-    }
-    hotspot?: {
-      x?: number,
-      y?: number
     }
   }
 }
@@ -32,11 +29,12 @@ const PortfolioCard = ({ index, title, url, frontImage, blockDescription, repoUr
         }`}
     >
       <div data-name="image-side" className={`flex items-center lg:w-1/2`}>
-        <ImageHot
-          image={frontImage}
+        <Img
+          fluid={frontImage.childImageSharp.fluid}
           alt={title}
-          customClasses="w-full rounded-lg"
+          className="w-full rounded-lg"
         />
+
       </div>
       <div
         data-name="description-side"
@@ -45,7 +43,8 @@ const PortfolioCard = ({ index, title, url, frontImage, blockDescription, repoUr
         <h3 className="text-2xl font-semibold text-center text-gray-900 font-header mb-7">
           {title}
         </h3>
-        <PortableText blocks={blockDescription} serializers={serializers} />
+        <p>{blockDescription}</p>
+        {/* <PortableText blocks={blockDescription} serializers={serializers} /> */}
         <div className="flex mt-2 space-x-3">
           <a
             href={url}

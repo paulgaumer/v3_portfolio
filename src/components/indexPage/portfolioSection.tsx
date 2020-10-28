@@ -8,17 +8,14 @@ import TechTag from "./techTag"
 interface PortfolioSectionProps {
   projects: {
     id: string,
+    strapiId: number,
     title: string,
     url: string,
     repoUrl: string
-    _rawBlockDescription: object[],
+    description: string,
     frontImage: {
-      asset: {
+      childImageSharp: {
         fluid: FluidObject
-      }
-      hotspot?: {
-        x?: number,
-        y?: number
       }
     }
   }[]
@@ -66,11 +63,11 @@ const PortfolioSection = ({ projects }: PortfolioSectionProps) => {
           </div>
           <div className="space-y-24 lg:space-y-32">
             {projects.map((project, index) => (
-              <Fade bottom key={project.id}>
+              <Fade bottom key={project.strapiId}>
                 <PortfolioCard
                   index={index}
                   title={project.title}
-                  blockDescription={project._rawBlockDescription}
+                  blockDescription={project.description}
                   url={project.url}
                   repoUrl={project.repoUrl}
                   frontImage={project.frontImage}

@@ -9,21 +9,18 @@ import { FluidObject } from "gatsby-image"
 
 interface DataProps extends PageProps {
   data: {
-    allSanityProject: {
+    allStrapiProject: {
       edges: {
         node: {
           id: string,
+          strapiId: number,
           title: string,
           url: string,
           repoUrl: string
-          _rawBlockDescription: object[],
+          description: string,
           frontImage: {
-            asset: {
+            childImageSharp: {
               fluid: FluidObject
-            }
-            hotspot?: {
-              x?: number,
-              y?: number
             }
           }
         }
@@ -33,7 +30,7 @@ interface DataProps extends PageProps {
 }
 
 const IndexPage: React.FC = ({ data }: DataProps) => {
-  const projects = data.allSanityProject.edges.map(({ node }) => node)
+  const projects = data.allStrapiProject.edges.map(({ node }) => node)
 
   return (
     <Layout>
@@ -49,27 +46,24 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    allSanityProject(sort: { order: DESC, fields: publishedAt }) {
-      edges {
-        node {
-          id
-          title
-          url
-          repoUrl
-          _rawBlockDescription
-          frontImage {
-            asset {
-              fluid {
-                ...GatsbySanityImageFluid
-              }
-            }
-            hotspot {
-              x
-              y
+    allStrapiProject(sort: { order: ASC, fields: created_at }) {
+    edges {
+      node {
+        id
+        strapiId
+        title
+        description
+        url
+        repoUrl
+        frontImage {
+          childImageSharp {
+            fluid {
+             ...GatsbyImageSharpFluid
             }
           }
         }
       }
     }
+  }
   }
 `
