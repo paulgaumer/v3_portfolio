@@ -1,13 +1,24 @@
 import React from "react"
-import Img from "gatsby-image"
-// import ImageHot from "../global/imageHot"
+import Img, { FluidObject } from "gatsby-image"
+import styled from "styled-components"
+import tw from "twin.macro"
+import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 import numberIsEven from "../../utils/numberIsEven"
 import Github from "../icons/github"
 import ExternalLink from "../icons/externalLink"
-// import PortableText from "@sanity/block-content-to-react"
-// import { serializers } from "../../utils/portableTextSerializer"
-import { FluidObject } from "gatsby-image"
 
+// STYLES
+const MarkdownContainer = styled.div`
+  p {
+    ${tw`mb-6 leading-relaxed tracking-wide`}
+  }
+  a {
+    ${tw`text-blue-600 no-underline hover:text-blue-700 hover:underline`}
+  }
+`
+
+// TYPES
 interface PortfolioCardProps {
   index: number,
   title: string,
@@ -43,8 +54,9 @@ const PortfolioCard = ({ index, title, url, frontImage, blockDescription, repoUr
         <h3 className="text-2xl font-semibold text-center text-gray-900 font-header mb-7">
           {title}
         </h3>
-        <p>{blockDescription}</p>
-        {/* <PortableText blocks={blockDescription} serializers={serializers} /> */}
+        <MarkdownContainer>
+          <ReactMarkdown plugins={[gfm]} children={blockDescription} />
+        </MarkdownContainer>
         <div className="flex mt-2 space-x-3">
           <a
             href={url}
