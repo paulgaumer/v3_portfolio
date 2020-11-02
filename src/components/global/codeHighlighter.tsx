@@ -1,17 +1,6 @@
 import React from "react"
-import styled from "styled-components"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism"
-
-// STYLES
-const Syntax = styled(SyntaxHighlighter)`
-  code::before {
-    content: none !important;
-  }
-  code::after {
-    content: none !important;
-  }
-`
 
 // TYPES
 interface CodeHighlighterProps {
@@ -28,16 +17,14 @@ const CodeHighlighter = ({ content }: CodeHighlighterProps) => {
   const { language, code } = content
 
   return (
-    <Syntax
+    <SyntaxHighlighter
       language={language || "text"}
       showLineNumbers={true}
-      wrapLines={true}
-      wrapLongLines={true}
       style={dracula}
-      customStyle={{ fontSize: "14px" }}
+      customStyle={{ fontSize: "16px" }}
     >
       {code}
-    </Syntax>
+    </SyntaxHighlighter>
   )
 }
 

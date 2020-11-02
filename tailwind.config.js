@@ -43,6 +43,19 @@ module.exports = {
           "ul > li::before": {
             content: "none",
           },
+          "pre code": {
+            fontSize: false,
+          },
+          code: {
+            fontSize: false,
+            fontWeight: false,
+          },
+          "code::before": {
+            content: "none",
+          },
+          "code::after": {
+            content: "none",
+          },
         },
       },
     }),
