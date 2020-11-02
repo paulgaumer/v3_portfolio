@@ -31,8 +31,10 @@ const CodeHighlighter = ({ content }: CodeHighlighterProps) => {
     <Syntax
       language={language || "text"}
       showLineNumbers={true}
+      wrapLines={true}
       wrapLongLines={true}
       style={dracula}
+      customStyle={{ fontSize: "14px" }}
     >
       {code}
     </Syntax>

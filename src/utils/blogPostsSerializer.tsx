@@ -1,7 +1,9 @@
 import React from "react"
 import Link from "../components/global/link"
+import styled from "styled-components"
+import tw from "twin.macro"
 import CodeHighlighter from "../components/global/codeHighlighter"
-// import urlBuilder from "@sanity/image-url"
+import urlBuilder from "@sanity/image-url"
 // import getYoutubeId from "get-youtube-id"
 
 // Custom component styled to spread full width while retaining a correct height
@@ -19,11 +21,15 @@ import CodeHighlighter from "../components/global/codeHighlighter"
 //   }
 // `
 
-// const urlFor = source =>
-//   urlBuilder({
-//     projectId: process.env.GATSBY_SANITY_PROJECT_ID,
-//     dataset: "production",
-//   }).image(source)
+const urlFor = source =>
+  urlBuilder({
+    projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+    dataset: "production",
+  }).image(source)
+
+const Figure = styled.figure`
+  ${tw`my-10!`}
+`
 
 /**
  * Used to transcribe and style Sanity's Portable Text format
@@ -62,22 +68,22 @@ export const serializers = {
     //     </YoutubeContainer>
     //   )
     // },
-    // mainImage(props) {
-    //   return (
-    //     <figure className="flex flex-col items-center justify-center my-10">
-    //       <img
-    //         src={urlFor(props.node.asset).url()}
-    //         alt={`${props.node.alt ? props.node.alt : "illustration"}`}
-    //         className="w-full rounded-sm md:w-1/2"
-    //       />
-    //       {props.node.caption && (
-    //         <figcaption className="pt-4 text-sm italic text-gray-600">
-    //           - {props.node.caption} -
-    //         </figcaption>
-    //       )}
-    //     </figure>
-    //   )
-    // },
+    image(props) {
+      return (
+        <Figure className="flex flex-col items-center justify-center">
+          <img
+            src={urlFor(props.node.asset).url()}
+            alt={`${props.node.alt ? props.node.alt : "illustration"}`}
+            className="w-full rounded-sm"
+          />
+          {props.node.caption && (
+            <figcaption className="pt-4 text-sm italic text-gray-600">
+              - {props.node.caption} -
+            </figcaption>
+          )}
+        </Figure>
+      )
+    },
   },
   marks: {
     link: ({ children, mark }) => <Link href={mark.href}>{children}</Link>,
@@ -92,7 +98,7 @@ export const serializers = {
   listItem: props => {
     switch (props.node.listItem) {
       case "bullet": {
-        return <li>{props.children}</li>
+        return <li>&#8226; {props.children}</li>
       }
       case "number": {
         return <li>{props.children}</li>
