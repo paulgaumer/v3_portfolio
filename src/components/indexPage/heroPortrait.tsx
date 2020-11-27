@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/contextProvider"
+import paulYellow from "../../images/paul-yellow.jpg"
 
 interface PortraitProps {
   sourceDefault: string,
@@ -27,37 +28,45 @@ const HeroPortrait = () => {
   switch (themeColor) {
     case "yellow":
       return (
+        // <Portrait
+        //   sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg"
+        //   sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.webp"
+        // />
         <Portrait
-          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg"
-          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.webp"
+          sourceDefault={paulYellow}
+          sourceWebp={paulYellow}
         />
       )
-    case "red":
-      return (
-        <Portrait
-          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.jpg"
-          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.webp"
-        />
-      )
-    case "blue":
-      return (
-        <Portrait
-          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.jpg"
-          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.webp"
-        />
-      )
-    case "green":
-      return (
-        <Portrait
-          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.jpg"
-          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.webp"
-        />
-      )
+    // case "red":
+    //   return (
+    //     <Portrait
+    //       sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.jpg"
+    //       sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.webp"
+    //     />
+    //   )
+    // case "blue":
+    //   return (
+    //     <Portrait
+    //       sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.jpg"
+    //       sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.webp"
+    //     />
+    //   )
+    // case "green":
+    //   return (
+    //     <Portrait
+    //       sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.jpg"
+    //       sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.webp"
+    //     />
+    //   )
     default:
       return (
+        // <Portrait
+        //   sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg"
+        //   sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.webp"
+        // />
         <Portrait
-          sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.jpg"
-          sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-yellow_v7hgb2.webp"
+          sourceDefault={paulYellow}
+          sourceWebp={paulYellow}
         />
       )
   }
