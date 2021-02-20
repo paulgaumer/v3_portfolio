@@ -28,6 +28,14 @@ module.exports = {
         // token: process.env.SANITY_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.STRAPI_API_URL || "http://localhost:1337",
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`project`],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
