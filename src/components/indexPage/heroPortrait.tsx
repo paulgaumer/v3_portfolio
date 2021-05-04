@@ -1,6 +1,9 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../context/contextProvider"
 import paulYellow from "../../images/paul-yellow.jpg"
+import paulRed from "../../images/paul-red.jpg"
+import paulBlue from "../../images/paul-blue.jpg"
+import paulGreen from "../../images/paul-green.jpg"
 
 interface PortraitProps {
   sourceDefault: string,
@@ -37,27 +40,39 @@ const HeroPortrait = () => {
           sourceWebp={paulYellow}
         />
       )
-    // case "red":
-    //   return (
-    //     <Portrait
-    //       sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.jpg"
-    //       sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.webp"
-    //     />
-    //   )
-    // case "blue":
-    //   return (
-    //     <Portrait
-    //       sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.jpg"
-    //       sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.webp"
-    //     />
-    //   )
-    // case "green":
-    //   return (
-    //     <Portrait
-    //       sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.jpg"
-    //       sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.webp"
-    //     />
-    //   )
+    case "red":
+      return (
+        // <Portrait
+        //   sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.jpg"
+        //   sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-red_femalv.webp"
+        // />
+        <Portrait
+          sourceDefault={paulRed}
+          sourceWebp={paulRed}
+        />
+      )
+    case "blue":
+      return (
+        // <Portrait
+        //   sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.jpg"
+        //   sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-blue_qlum3k.webp"
+        // />
+        <Portrait
+          sourceDefault={paulBlue}
+          sourceWebp={paulBlue}
+        />
+      )
+    case "green":
+      return (
+        // <Portrait
+        //   sourceDefault="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.jpg"
+        //   sourceWebp="https://res.cloudinary.com/dujnmeiiu/image/upload/v1602745429/paul-green_swmecm.webp"
+        // />
+        <Portrait
+          sourceDefault={paulGreen}
+          sourceWebp={paulGreen}
+        />
+      )
     default:
       return (
         // <Portrait
